@@ -1,0 +1,96 @@
+/* -------- Global -------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* -------- Header -------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: #0a58ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* -------- No Notifications Page -------- */
+.no-notif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #555;
+}
+
+.no-notif-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+/* -------- Notification List -------- */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 35px 0 15px 0;
+}
+
+.notif-card {
+    background: #f0f0f0;
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.notif-date {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.bold {
+    font-weight: bold;
+}

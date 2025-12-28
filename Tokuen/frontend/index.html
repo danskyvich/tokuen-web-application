@@ -5,89 +5,92 @@
     <meta name="author" content="TOKUEN" />
     <meta name="description" content="The official website of TOKUEN" />
     <title>TOKUEN – Login</title>
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/tokuen_logo.png"
+      src=""
+    />
   </head>
   <body>
-    <div class="page-wrapper">
+    <div class="login-page flex-container">
       <!-- LEFT SIDE -->
-      <section class="hero">
-        <div class="hero-content">
-          <!-- slider dots -->
-          <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-          </div>
-
-          <div class="hero-text">
-            <h1>Loaning made easier.</h1>
-            <p>For Filipinos, by Filipinos.</p>
-          </div>
-
-          <div class="phone-wrapper">
-            <img
-              src="images/phone-mockup.png"
-              alt="Mobile app preview"
-              class="phone-img"
-            />
-          </div>
+      <section class="left-container">
+        <!-- slider dots -->
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
         </div>
+
+        <img src="" alt="span-image" />
       </section>
 
       <!-- RIGHT SIDE -->
-      <section class="auth">
-        <div class="auth-inner">
-          <header class="auth-header">
+      <section class="right-container">
+        <header class="auth-header">
+          <div class="title-header login-form">
             <img
-              src="images/tokuen-logo.png"
+              src="./images/tokuen_logo.png"
               alt="Tokuen logo"
               class="logo-img"
             />
-            <span class="logo-text">TOKUEN</span>
-          </header>
-
-          <h2 class="auth-title">Log in to your account</h2>
+            <span>TOKUEN</span>
+          </div>
+          <p class="auth-title">Log in to your account</p>
           <p class="auth-subtitle">
-            Enter your email/phone number and password
+            Enter your email or phone number and password.
           </p>
+        </header>
 
-          <form class="login-form">
-            <div class="form-group">
-              <input
-                type="text"
-                placeholder="Enter your email or phone number..."
-              />
-            </div>
-            <div class="form-group password-group">
-              <input type="password" placeholder="Enter your password..." />
-              <button
-                type="button"
-                class="toggle-password"
-                aria-label="Show password"
-              >
-                👁
-              </button>
-            </div>
+        <div class="auth-body login-layout">
+          <form>
+            <input
+              type="text"
+              placeholder="Enter your email or phone number..."
+            />
+            <input type="password" placeholder="Enter your password..." />
 
-            <div class="forgot-row">
-              <a href="#" class="forgot-link">Forgot password?</a>
-            </div>
+            <a
+              id="forgot-password-label"
+              href="./auth-forgot-password/forgot-password.html"
+              >Forgot password?</a
+            >
 
-            <button type="submit" class="btn primary-btn">Log in</button>
+            <button type="submit" class="primary-button login-button" disabled>
+              Log in
+            </button>
 
-            <div class="divider">
-              <span>or</span>
-            </div>
+            <h2><span>or</span></h2>
 
-            <a href="#" class="btn secondary-btn">Register</a>
+            <button type="submit" class="secondary-button register-button">
+              Register
+            </button>
           </form>
-
-          <footer class="auth-footer">
-            <a href="#">Privacy and Policy</a>
-            <span>•</span>
-            <a href="#">Terms and Conditions</a>
-          </footer>
         </div>
+
+        <footer class="auth-footer">
+          <p id="footer-text">
+            TOKN and Artiphix is regulated by the Bangko Sentral ng Pilipinas
+            --<a href="https://www.bsp.gov.ph/SitePages/Default.aspx"
+              >bsp.gov.ph</a
+            >. For any concerns, check out <a>Help Center</a> or our social
+            media pages for any service advisories.
+          </p>
+          <p id="footer-copyright">
+            @Copyright Artiphix 2026 all rights reserved
+          </p>
+          <div class="row-elements">
+            <a href="./privacy-policies-and-toc/privacy-policy.html"
+              >Privacy and Policy</a
+            >
+            <span>•</span>
+            <a href="./privacy-policies-and-toc/terms-and-conditions.html"
+              >Terms and Conditions</a
+            >
+          </div>
+        </footer>
       </section>
     </div>
   </body>
