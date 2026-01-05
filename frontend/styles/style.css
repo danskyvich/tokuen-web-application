@@ -164,6 +164,13 @@ button {
     padding: 10%;
     height: fit-content;
 }
+    .card-layout p{
+        text-align: center;
+    } 
+.fp-form-1 {
+    display: flex;
+    width: 100%;
+}
 
 /** Page specific **/
 
