@@ -1,10 +1,10 @@
 import './App.css'
-import Homepage from './pages/authentication/homepage/homepage'
+import AuthEntry from './pages/authentication/auth-entry/auth-entry'
 
 function App() {
   return (
     <>
-      <Homepage/>
+      <AuthEntry/>
     </>
   )
 }

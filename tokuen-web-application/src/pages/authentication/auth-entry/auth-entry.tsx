@@ -1,12 +1,12 @@
-import GenHeader from "../../../components/header-tokuen-logo"
+import GenHeader from "../../../components/header-tokuen-logo.tsx"
 import FilledButton from "../../../components/filled-button.tsx"
 
 import { TextField }  from '@mui/material'
 import Stack from '@mui/material/Stack'
-import './homepage.css'
+import './auth-entry.css'
 import OutlinedButton from "../../../components/outlined-button.tsx"
 
-export default function Homepage() {
+export default function AuthEntry() {
     return <>
         <div className='flex w-screen h-screen m-0 p-0 justify-center items-center'>
 
