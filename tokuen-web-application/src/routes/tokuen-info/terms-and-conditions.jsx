@@ -18,7 +18,7 @@ function TermsAndConditions() {
         <div className='flex flex-col relative w-[50%] h-[75%] right-0 top-0 self-end gap-2'>
           <div className='flex flex-[0 1 auto] flex-row w-2/6 h-16 items-center'>
             <GenHeader
-              img={'favicon.png'}
+              img={'./../../../public/resources/tokuen-colored.png'}
               text={'TOKUEN'}
               textColor={'white'}
             />
@@ -28,16 +28,16 @@ function TermsAndConditions() {
           </div>
           <div className='flex flex-[0 1 auto] flex-col self-start pr-12 text-x font-semibold text-white'>
             <li className='list-none'>
-              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#first-pp'>Your Agreement</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#second-tac'>Privacy</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#third-tac'>Linked Sites</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#fourth-tac'>Forward Looking Statements</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#fifth-tac'>Disclaimer of Warranties and Limitation of Liability</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#sixth-tac'>Exclusions and Limitations</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#seventh-tac'>Our Proprietary Rights</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#eight-tac'>Indemnity</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#ninth-tac'>Copyright and Trademark Notice</a></li>
-                      <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#tenth-tac'>Intellectual Property Infringement Claims</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#first-tac'>Your Agreement</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#second-tac'>Privacy</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#third-tac'>Linked Sites</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#fourth-tac'>Forward Looking Statements</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#fifth-tac'>Disclaimer of Warranties and Limitation of Liability</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#sixth-tac'>Exclusions and Limitations</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#seventh-tac'>Our Proprietary Rights</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#eight-tac'>Indemnity</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#ninth-tac'>Copyright and Trademark Notice</a></li>
+              <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#tenth-tac'>Intellectual Property Infringement Claims</a></li>
             </li>
           </div>
         </div>

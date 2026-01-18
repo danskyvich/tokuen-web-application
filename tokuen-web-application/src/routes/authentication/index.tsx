@@ -25,7 +25,7 @@ export default function AuthEntry() {
                     {/**TOKUEN + logo*/}
                     <div className='flex flex-1 w-full h-fit justify-start items-end mb-4 mt-8'>
                         <GenHeader
-                            img={'favicon.png'}
+                            img={'./favicon.png'}
                             text={'TOKUEN'}
                             textColor={'black'}
                         />
@@ -57,7 +57,7 @@ export default function AuthEntry() {
                                 className='w-full ml-4'
                                 aria-invalid='false'
                             />
-                            <a href="#" className='flex-1 font-semibold text-x self-end cursor-pointer hover:underline'>Forgot Password?</a>
+                            <a href="/authentication/forgot-password/forgot-password-0" className='flex-1 font-semibold text-x self-end cursor-pointer hover:underline'>Forgot Password?</a>
                         </Stack>
                     </div>
 
@@ -76,10 +76,10 @@ export default function AuthEntry() {
                             <Link to="/tokuen-info/privacy-policy" className='cursor-pointer hover:underline'>
                                 Privacy Policy
                             </Link>
-                             • 
-                             <a href="/tokuen-info/terms-and-conditions" className='cursor-pointer hover:underline'>
+                            • 
+                             <Link to="/tokuen-info/terms-and-conditions" className='cursor-pointer hover:underline'>
                                 Terms and Conditions
-                             </a>
+                             </Link>
                         </p>
                     </div>
                 </div>

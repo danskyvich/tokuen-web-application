@@ -13,6 +13,9 @@ import { Route as SampleRouteImport } from './routes/sample'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TokuenInfoTermsAndConditionsRouteImport } from './routes/tokuen-info/terms-and-conditions'
 import { Route as TokuenInfoPrivacyPolicyRouteImport } from './routes/tokuen-info/privacy-policy'
+import { Route as AuthenticationForgotPasswordPasswordChangedRouteImport } from './routes/authentication/forgot-password/password-changed'
+import { Route as AuthenticationForgotPasswordForgotPassword1RouteImport } from './routes/authentication/forgot-password/forgot-password-1'
+import { Route as AuthenticationForgotPasswordForgotPassword0RouteImport } from './routes/authentication/forgot-password/forgot-password-0'
 
 const SampleRoute = SampleRouteImport.update({
   id: '/sample',
@@ -35,18 +38,42 @@ const TokuenInfoPrivacyPolicyRoute = TokuenInfoPrivacyPolicyRouteImport.update({
   path: '/tokuen-info/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticationForgotPasswordPasswordChangedRoute =
+  AuthenticationForgotPasswordPasswordChangedRouteImport.update({
+    id: '/authentication/forgot-password/password-changed',
+    path: '/authentication/forgot-password/password-changed',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationForgotPasswordForgotPassword1Route =
+  AuthenticationForgotPasswordForgotPassword1RouteImport.update({
+    id: '/authentication/forgot-password/forgot-password-1',
+    path: '/authentication/forgot-password/forgot-password-1',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationForgotPasswordForgotPassword0Route =
+  AuthenticationForgotPasswordForgotPassword0RouteImport.update({
+    id: '/authentication/forgot-password/forgot-password-0',
+    path: '/authentication/forgot-password/forgot-password-0',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
+  '/authentication/forgot-password/forgot-password-0': typeof AuthenticationForgotPasswordForgotPassword0Route
+  '/authentication/forgot-password/forgot-password-1': typeof AuthenticationForgotPasswordForgotPassword1Route
+  '/authentication/forgot-password/password-changed': typeof AuthenticationForgotPasswordPasswordChangedRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
+  '/authentication/forgot-password/forgot-password-0': typeof AuthenticationForgotPasswordForgotPassword0Route
+  '/authentication/forgot-password/forgot-password-1': typeof AuthenticationForgotPasswordForgotPassword1Route
+  '/authentication/forgot-password/password-changed': typeof AuthenticationForgotPasswordPasswordChangedRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -54,6 +81,9 @@ export interface FileRoutesById {
   '/sample': typeof SampleRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
+  '/authentication/forgot-password/forgot-password-0': typeof AuthenticationForgotPasswordForgotPassword0Route
+  '/authentication/forgot-password/forgot-password-1': typeof AuthenticationForgotPasswordForgotPassword1Route
+  '/authentication/forgot-password/password-changed': typeof AuthenticationForgotPasswordPasswordChangedRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -62,18 +92,27 @@ export interface FileRouteTypes {
     | '/sample'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
+    | '/authentication/forgot-password/forgot-password-0'
+    | '/authentication/forgot-password/forgot-password-1'
+    | '/authentication/forgot-password/password-changed'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/sample'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
+    | '/authentication/forgot-password/forgot-password-0'
+    | '/authentication/forgot-password/forgot-password-1'
+    | '/authentication/forgot-password/password-changed'
   id:
     | '__root__'
     | '/'
     | '/sample'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
+    | '/authentication/forgot-password/forgot-password-0'
+    | '/authentication/forgot-password/forgot-password-1'
+    | '/authentication/forgot-password/password-changed'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -81,6 +120,9 @@ export interface RootRouteChildren {
   SampleRoute: typeof SampleRoute
   TokuenInfoPrivacyPolicyRoute: typeof TokuenInfoPrivacyPolicyRoute
   TokuenInfoTermsAndConditionsRoute: typeof TokuenInfoTermsAndConditionsRoute
+  AuthenticationForgotPasswordForgotPassword0Route: typeof AuthenticationForgotPasswordForgotPassword0Route
+  AuthenticationForgotPasswordForgotPassword1Route: typeof AuthenticationForgotPasswordForgotPassword1Route
+  AuthenticationForgotPasswordPasswordChangedRoute: typeof AuthenticationForgotPasswordPasswordChangedRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -113,6 +155,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TokuenInfoPrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/authentication/forgot-password/password-changed': {
+      id: '/authentication/forgot-password/password-changed'
+      path: '/authentication/forgot-password/password-changed'
+      fullPath: '/authentication/forgot-password/password-changed'
+      preLoaderRoute: typeof AuthenticationForgotPasswordPasswordChangedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/forgot-password/forgot-password-1': {
+      id: '/authentication/forgot-password/forgot-password-1'
+      path: '/authentication/forgot-password/forgot-password-1'
+      fullPath: '/authentication/forgot-password/forgot-password-1'
+      preLoaderRoute: typeof AuthenticationForgotPasswordForgotPassword1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/forgot-password/forgot-password-0': {
+      id: '/authentication/forgot-password/forgot-password-0'
+      path: '/authentication/forgot-password/forgot-password-0'
+      fullPath: '/authentication/forgot-password/forgot-password-0'
+      preLoaderRoute: typeof AuthenticationForgotPasswordForgotPassword0RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -121,6 +184,12 @@ const rootRouteChildren: RootRouteChildren = {
   SampleRoute: SampleRoute,
   TokuenInfoPrivacyPolicyRoute: TokuenInfoPrivacyPolicyRoute,
   TokuenInfoTermsAndConditionsRoute: TokuenInfoTermsAndConditionsRoute,
+  AuthenticationForgotPasswordForgotPassword0Route:
+    AuthenticationForgotPasswordForgotPassword0Route,
+  AuthenticationForgotPasswordForgotPassword1Route:
+    AuthenticationForgotPasswordForgotPassword1Route,
+  AuthenticationForgotPasswordPasswordChangedRoute:
+    AuthenticationForgotPasswordPasswordChangedRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
