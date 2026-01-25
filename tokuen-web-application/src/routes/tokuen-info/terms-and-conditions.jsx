@@ -8,7 +8,7 @@ export const Route = createFileRoute("/tokuen-info/terms-and-conditions")({
 function TermsAndConditions() {
   return <>
   {/**Whole page */}
-  <div className="flex flex-col h-screen w-screen m-0 p-0">
+  <div className="page">
 
     {/**Content */}
     <section className='flex flex-1 w-full h-full bg-linear-to-b from-indigo-900 to-purple-900'>
@@ -21,9 +21,10 @@ function TermsAndConditions() {
               img={'./../../../public/resources/tokuen-colored.png'}
               text={'TOKUEN'}
               textColor={'white'}
+              width='3rem'
             />
           </div>
-          <div className='flex flex-[0 1 auto] flex-col text-white font-semibold'>
+          <div className='flex flex-[0 1 auto] flex-col pl-[8%] text-white font-semibold items-start justify-center'>
             <p className='text-3xl'>Terms and Conditions</p>
           </div>
           <div className='flex flex-[0 1 auto] flex-col self-start pr-12 text-x font-semibold text-white'>
@@ -44,7 +45,7 @@ function TermsAndConditions() {
       </div>
 
       {/**Right side */}
-      <div className='flex flex-1 flex-col w-[60%] h-full text-(--white) pt-16 pb-16 pl-16 pr-8 overflow-y-auto scroll-smooth'>
+      <div className='flex flex-1 flex-col w-[60%] h-full text-white pt-16 pb-16 pl-16 pr-8 overflow-y-auto scroll-smooth'>
         <div className='w-[60%]'>
           <h1>Effective Nov 10, 2025</h1>
           <p className='flex-0 cursor-pointer hover:underline font-semibold text-(--subheader-two)'><a href=''>view printable version</a></p>

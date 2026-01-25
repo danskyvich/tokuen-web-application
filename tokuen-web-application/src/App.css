@@ -11,8 +11,110 @@
     --subheader-two: #DEDEDE;
   --filled-button: #7E4BA6;
     --filled-button-dark: #4F2271;
-  --white: #ffffff;
+    --filled-button-active: #2b123e;
+  --red-button-dark: #a40000;
+    --red-button-active: #6b0000;
   --heading-bold: 700;
+  --gray: #cbcbcb;
+
+  --icon-size-normal: 2rem;
+  --icon-size-small: 1rem;
+
+  --avatar-size-small: 3rem;
+}
+
+@layer components {
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    display: flex;
+    flex: 1;
+    border: 2px solid var(--gray);
+    border-radius: 12px;
+    box-shadow: 0pz 25px 25px var(--gray);
+  }
+
+  /*Button variants*/
+  .purple-button-filled {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    font-weight: 700;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid var(--filled-button);
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    background-color: var(--filled-button);
+
+    @variant hover {
+      background: var(--filled-button-dark);
+      border: 2px solid var(--filled-button-dark);
+      
+      @variant active {
+        background: var(--filled-button-active);
+        border: 2px solid var(--filled-button-active);
+        color: white;
+      }
+    }
+  }
+
+  .black-button-outlined {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    font-weight: 700;
+    color: black;
+    border-radius: 12px;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    background-color: transparent;
+
+    @variant hover {
+      background: var(--gray);
+      color: black;
+
+      @variant active {
+        background: black;
+        color: white;
+      }
+    }
+  }
+
+  .red-button {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    font-weight: 700;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid red;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    background-color: red;
+
+    @variant hover {
+      background: var(--red-button-dark);
+      border: 2px solid var(--red-button-dark);
+
+      @variant active {
+        background: var(--red-button-active);
+        border: 2px solid var(--red-button-active)
+      }
+    }
+  }
 }
 
 * {

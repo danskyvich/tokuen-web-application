@@ -1,15 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router'
-import GenHeader from '../../../components/header-tokuen-logo'
-import { TextField, Stack } from '@mui/material'
-import FilledButton from '../../../components/filled-button'
+import { TextField, Stack} from '@mui/material'
+import GenHeader from '../../components/header-tokuen-logo'
+import FilledButton from '../../components/filled-button'
 
-export const Route = createFileRoute(
-  '/authentication/forgot-password/forgot-password-1',
-)({
+export const Route = createFileRoute('/add-phone-number/')({
   component: RouteComponent,
 })
-
-
 
 function RouteComponent() {
   return <div className='page'>
@@ -19,7 +15,7 @@ function RouteComponent() {
         <div className='flex flex-col w-full h-full p-6 self-center justify-self-center border-2 border-stone-300 rounded-2xl shadow-xl'>
 
           {/**Header */}
-          <div className='flex flex-1 flex-row w-full h-fit pb-4 px-[20%] justify-center items-end'>
+          <div className='flex flex-1 flex-row w-full h-fit pb-4 py-[20%] justify-center items-center'>
             <GenHeader
               text={'TOKUEN'}
               textColor={'black'}
@@ -30,7 +26,8 @@ function RouteComponent() {
 
           {/**Texts */}
           <div className='flex flex-col flex-0 w-full h-fit'>
-            <p className='w-full h-fit text-[2rem] text-(--black) font-semibold'>Create a new password</p>
+            <p className='w-full h-fit text-[2rem] text-(--black) font-semibold'>Add your phone number</p>
+            <p className='w-full h-fit text-[1rem] text-(--subheader)'>Enter your personal phone number here.</p>
           </div>
 
           {/**Form */}
@@ -39,15 +36,7 @@ function RouteComponent() {
               <TextField 
               type='text'
               id="filled-basic" 
-              label="Enter your new password" 
-              variant="outlined" 
-              className='w-full'
-              aria-invalid='false'
-            />
-            <TextField 
-              type='text'
-              id="filled-basic" 
-              label="Retype your new password" 
+              label="Enter your new phone number here..." 
               variant="outlined" 
               className='w-full'
               aria-invalid='false'
@@ -55,12 +44,12 @@ function RouteComponent() {
             </Stack>
           </div>
 
-          <div className='flex flex-auto h-full'/>
+          <div className='flex flex-2 w-full'/>
 
           <FilledButton
-            url='/authentication/forgot-password/password-changed'
-            textSize='text-[1rem]'
-            buttonText='Continue'
+            buttonText={'Log in'}
+            url={'/authentication/verify-email/'}
+            textSize="text-[1rem]"
             effects='purple-button-filled'
           />
         </div>

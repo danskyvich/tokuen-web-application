@@ -1,13 +1,24 @@
-interface ButtonProps{
-    buttonText: string;
+import classnames from 'classnames'
+import { Link } from '@tanstack/react-router'
+
+interface Props {
+    url : string,
+    buttonText: string,
+    textWeight: string,
+    textSize: string,
+    effects: string,
 }
 
-const OutlinedButton = ({buttonText} : ButtonProps) => {
+const OutlinedButton = ({url, buttonText, textWeight, textSize, effects} : Props) => {
+
+    const classStr = classnames(
+        textWeight, textSize, effects
+    )
     return <>
-        <a
-            href="#"
-            className='flex flex-0 w-full bg-(--white) border-2 border-(--filled-button) rounded-xl p-3 justify-center text-(--filled-button) font-semibold'
-        >{buttonText}</a>
+        <Link
+            to={url}
+            className={classStr}
+        >{buttonText}</Link>
     </>
 }
 

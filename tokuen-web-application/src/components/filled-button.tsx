@@ -1,14 +1,22 @@
+import { Link } from "@tanstack/react-router";
+import classnames from 'classnames'
+
 interface ButtonProps {
     buttonText : string;
+    url: string;
+    textSize: string,
+    effects: string
 }
 
-const FilledButton = ({buttonText} : ButtonProps) => {
+const FilledButton = ({buttonText, url, textSize, effects} : ButtonProps) => {
+
+    const classStr = classnames(textSize, effects)
     return <>
-        <a 
-            href="#"
-            className='flex flex-0 w-full bg-(--filled-button) text-(--white) p-3 justify-center rounded-xl font-semibold hover:bg-(--filled-button-dark)'
+        <Link className={classStr}
+            to={url}
         >
-            <p className='text-semibold'>{buttonText}</p></a>
+            <p>{buttonText}</p>
+        </Link>
     </>
 }
 

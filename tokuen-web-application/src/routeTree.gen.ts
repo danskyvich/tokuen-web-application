@@ -11,11 +11,39 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SampleRouteImport } from './routes/sample'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UserProfileIndexRouteImport } from './routes/user-profile/index'
+import { Route as UpdatePhoneIndexRouteImport } from './routes/update-phone/index'
+import { Route as ReferAndEarnIndexRouteImport } from './routes/refer-and-earn/index'
+import { Route as PaymentMethodsIndexRouteImport } from './routes/payment-methods/index'
+import { Route as PayLoanIndexRouteImport } from './routes/pay-loan/index'
+import { Route as NotificationsIndexRouteImport } from './routes/notifications/index'
+import { Route as LoanApplicationIndexRouteImport } from './routes/loan-application/index'
+import { Route as DeleteAccountIndexRouteImport } from './routes/delete-account/index'
+import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
+import { Route as AddPhoneNumberIndexRouteImport } from './routes/add-phone-number/index'
+import { Route as UpdatePhoneVerifyPhoneRouteImport } from './routes/update-phone/verify-phone'
+import { Route as UpdatePhoneNumberVerifiedRouteImport } from './routes/update-phone/number-verified'
 import { Route as TokuenInfoTermsAndConditionsRouteImport } from './routes/tokuen-info/terms-and-conditions'
 import { Route as TokuenInfoPrivacyPolicyRouteImport } from './routes/tokuen-info/privacy-policy'
+import { Route as PaymentMethodsCardAddedRouteImport } from './routes/payment-methods/card-added'
+import { Route as PaymentMethodsAddCardRouteImport } from './routes/payment-methods/add-card'
+import { Route as PayLoanReviewDetailsRouteImport } from './routes/pay-loan/review-details'
+import { Route as PayLoanPayThroughRouteImport } from './routes/pay-loan/pay-through'
+import { Route as PayLoanLoanPaidRouteImport } from './routes/pay-loan/loan-paid'
+import { Route as LoanApplicationLoanDetailsRouteImport } from './routes/loan-application/loan-details'
+import { Route as LoanApplicationLoanApprovedRouteImport } from './routes/loan-application/loan-approved'
+import { Route as LoanApplicationChooseEmiRouteImport } from './routes/loan-application/choose-emi'
+import { Route as DeleteAccountDeleteUsingPhoneRouteImport } from './routes/delete-account/delete-using-phone'
+import { Route as DeleteAccountAccountDeletedRouteImport } from './routes/delete-account/account-deleted'
+import { Route as AddPhoneNumberPhoneNumberAddedRouteImport } from './routes/add-phone-number/phone-number-added'
+import { Route as AuthenticationVerifyEmailIndexRouteImport } from './routes/authentication/verify-email/index'
+import { Route as AuthenticationRegistrationIndexRouteImport } from './routes/authentication/registration/index'
+import { Route as AuthenticationForgotPasswordIndexRouteImport } from './routes/authentication/forgot-password/index'
+import { Route as AuthenticationVerifyEmailEmailVerifiedRouteImport } from './routes/authentication/verify-email/email-verified'
+import { Route as AuthenticationRegistrationCreatePasswordRouteImport } from './routes/authentication/registration/create-password'
+import { Route as AuthenticationRegistrationAccountCreatedRouteImport } from './routes/authentication/registration/account-created'
 import { Route as AuthenticationForgotPasswordPasswordChangedRouteImport } from './routes/authentication/forgot-password/password-changed'
 import { Route as AuthenticationForgotPasswordForgotPassword1RouteImport } from './routes/authentication/forgot-password/forgot-password-1'
-import { Route as AuthenticationForgotPasswordForgotPassword0RouteImport } from './routes/authentication/forgot-password/forgot-password-0'
 
 const SampleRoute = SampleRouteImport.update({
   id: '/sample',
@@ -27,6 +55,67 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UserProfileIndexRoute = UserProfileIndexRouteImport.update({
+  id: '/user-profile/',
+  path: '/user-profile/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UpdatePhoneIndexRoute = UpdatePhoneIndexRouteImport.update({
+  id: '/update-phone/',
+  path: '/update-phone/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferAndEarnIndexRoute = ReferAndEarnIndexRouteImport.update({
+  id: '/refer-and-earn/',
+  path: '/refer-and-earn/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaymentMethodsIndexRoute = PaymentMethodsIndexRouteImport.update({
+  id: '/payment-methods/',
+  path: '/payment-methods/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayLoanIndexRoute = PayLoanIndexRouteImport.update({
+  id: '/pay-loan/',
+  path: '/pay-loan/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsIndexRoute = NotificationsIndexRouteImport.update({
+  id: '/notifications/',
+  path: '/notifications/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoanApplicationIndexRoute = LoanApplicationIndexRouteImport.update({
+  id: '/loan-application/',
+  path: '/loan-application/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeleteAccountIndexRoute = DeleteAccountIndexRouteImport.update({
+  id: '/delete-account/',
+  path: '/delete-account/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardIndexRoute = DashboardIndexRouteImport.update({
+  id: '/dashboard/',
+  path: '/dashboard/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AddPhoneNumberIndexRoute = AddPhoneNumberIndexRouteImport.update({
+  id: '/add-phone-number/',
+  path: '/add-phone-number/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UpdatePhoneVerifyPhoneRoute = UpdatePhoneVerifyPhoneRouteImport.update({
+  id: '/update-phone/verify-phone',
+  path: '/update-phone/verify-phone',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UpdatePhoneNumberVerifiedRoute =
+  UpdatePhoneNumberVerifiedRouteImport.update({
+    id: '/update-phone/number-verified',
+    path: '/update-phone/number-verified',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const TokuenInfoTermsAndConditionsRoute =
   TokuenInfoTermsAndConditionsRouteImport.update({
     id: '/tokuen-info/terms-and-conditions',
@@ -38,6 +127,103 @@ const TokuenInfoPrivacyPolicyRoute = TokuenInfoPrivacyPolicyRouteImport.update({
   path: '/tokuen-info/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PaymentMethodsCardAddedRoute = PaymentMethodsCardAddedRouteImport.update({
+  id: '/payment-methods/card-added',
+  path: '/payment-methods/card-added',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaymentMethodsAddCardRoute = PaymentMethodsAddCardRouteImport.update({
+  id: '/payment-methods/add-card',
+  path: '/payment-methods/add-card',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayLoanReviewDetailsRoute = PayLoanReviewDetailsRouteImport.update({
+  id: '/pay-loan/review-details',
+  path: '/pay-loan/review-details',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayLoanPayThroughRoute = PayLoanPayThroughRouteImport.update({
+  id: '/pay-loan/pay-through',
+  path: '/pay-loan/pay-through',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PayLoanLoanPaidRoute = PayLoanLoanPaidRouteImport.update({
+  id: '/pay-loan/loan-paid',
+  path: '/pay-loan/loan-paid',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoanApplicationLoanDetailsRoute =
+  LoanApplicationLoanDetailsRouteImport.update({
+    id: '/loan-application/loan-details',
+    path: '/loan-application/loan-details',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LoanApplicationLoanApprovedRoute =
+  LoanApplicationLoanApprovedRouteImport.update({
+    id: '/loan-application/loan-approved',
+    path: '/loan-application/loan-approved',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LoanApplicationChooseEmiRoute =
+  LoanApplicationChooseEmiRouteImport.update({
+    id: '/loan-application/choose-emi',
+    path: '/loan-application/choose-emi',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DeleteAccountDeleteUsingPhoneRoute =
+  DeleteAccountDeleteUsingPhoneRouteImport.update({
+    id: '/delete-account/delete-using-phone',
+    path: '/delete-account/delete-using-phone',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DeleteAccountAccountDeletedRoute =
+  DeleteAccountAccountDeletedRouteImport.update({
+    id: '/delete-account/account-deleted',
+    path: '/delete-account/account-deleted',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AddPhoneNumberPhoneNumberAddedRoute =
+  AddPhoneNumberPhoneNumberAddedRouteImport.update({
+    id: '/add-phone-number/phone-number-added',
+    path: '/add-phone-number/phone-number-added',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationVerifyEmailIndexRoute =
+  AuthenticationVerifyEmailIndexRouteImport.update({
+    id: '/authentication/verify-email/',
+    path: '/authentication/verify-email/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationRegistrationIndexRoute =
+  AuthenticationRegistrationIndexRouteImport.update({
+    id: '/authentication/registration/',
+    path: '/authentication/registration/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationForgotPasswordIndexRoute =
+  AuthenticationForgotPasswordIndexRouteImport.update({
+    id: '/authentication/forgot-password/',
+    path: '/authentication/forgot-password/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationVerifyEmailEmailVerifiedRoute =
+  AuthenticationVerifyEmailEmailVerifiedRouteImport.update({
+    id: '/authentication/verify-email/email-verified',
+    path: '/authentication/verify-email/email-verified',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationRegistrationCreatePasswordRoute =
+  AuthenticationRegistrationCreatePasswordRouteImport.update({
+    id: '/authentication/registration/create-password',
+    path: '/authentication/registration/create-password',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AuthenticationRegistrationAccountCreatedRoute =
+  AuthenticationRegistrationAccountCreatedRouteImport.update({
+    id: '/authentication/registration/account-created',
+    path: '/authentication/registration/account-created',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AuthenticationForgotPasswordPasswordChangedRoute =
   AuthenticationForgotPasswordPasswordChangedRouteImport.update({
     id: '/authentication/forgot-password/password-changed',
@@ -50,79 +236,269 @@ const AuthenticationForgotPasswordForgotPassword1Route =
     path: '/authentication/forgot-password/forgot-password-1',
     getParentRoute: () => rootRouteImport,
   } as any)
-const AuthenticationForgotPasswordForgotPassword0Route =
-  AuthenticationForgotPasswordForgotPassword0RouteImport.update({
-    id: '/authentication/forgot-password/forgot-password-0',
-    path: '/authentication/forgot-password/forgot-password-0',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
+  '/add-phone-number/phone-number-added': typeof AddPhoneNumberPhoneNumberAddedRoute
+  '/delete-account/account-deleted': typeof DeleteAccountAccountDeletedRoute
+  '/delete-account/delete-using-phone': typeof DeleteAccountDeleteUsingPhoneRoute
+  '/loan-application/choose-emi': typeof LoanApplicationChooseEmiRoute
+  '/loan-application/loan-approved': typeof LoanApplicationLoanApprovedRoute
+  '/loan-application/loan-details': typeof LoanApplicationLoanDetailsRoute
+  '/pay-loan/loan-paid': typeof PayLoanLoanPaidRoute
+  '/pay-loan/pay-through': typeof PayLoanPayThroughRoute
+  '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
+  '/payment-methods/add-card': typeof PaymentMethodsAddCardRoute
+  '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
-  '/authentication/forgot-password/forgot-password-0': typeof AuthenticationForgotPasswordForgotPassword0Route
+  '/update-phone/number-verified': typeof UpdatePhoneNumberVerifiedRoute
+  '/update-phone/verify-phone': typeof UpdatePhoneVerifyPhoneRoute
+  '/add-phone-number': typeof AddPhoneNumberIndexRoute
+  '/dashboard': typeof DashboardIndexRoute
+  '/delete-account': typeof DeleteAccountIndexRoute
+  '/loan-application': typeof LoanApplicationIndexRoute
+  '/notifications': typeof NotificationsIndexRoute
+  '/pay-loan': typeof PayLoanIndexRoute
+  '/payment-methods': typeof PaymentMethodsIndexRoute
+  '/refer-and-earn': typeof ReferAndEarnIndexRoute
+  '/update-phone': typeof UpdatePhoneIndexRoute
+  '/user-profile': typeof UserProfileIndexRoute
   '/authentication/forgot-password/forgot-password-1': typeof AuthenticationForgotPasswordForgotPassword1Route
   '/authentication/forgot-password/password-changed': typeof AuthenticationForgotPasswordPasswordChangedRoute
+  '/authentication/registration/account-created': typeof AuthenticationRegistrationAccountCreatedRoute
+  '/authentication/registration/create-password': typeof AuthenticationRegistrationCreatePasswordRoute
+  '/authentication/verify-email/email-verified': typeof AuthenticationVerifyEmailEmailVerifiedRoute
+  '/authentication/forgot-password': typeof AuthenticationForgotPasswordIndexRoute
+  '/authentication/registration': typeof AuthenticationRegistrationIndexRoute
+  '/authentication/verify-email': typeof AuthenticationVerifyEmailIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
+  '/add-phone-number/phone-number-added': typeof AddPhoneNumberPhoneNumberAddedRoute
+  '/delete-account/account-deleted': typeof DeleteAccountAccountDeletedRoute
+  '/delete-account/delete-using-phone': typeof DeleteAccountDeleteUsingPhoneRoute
+  '/loan-application/choose-emi': typeof LoanApplicationChooseEmiRoute
+  '/loan-application/loan-approved': typeof LoanApplicationLoanApprovedRoute
+  '/loan-application/loan-details': typeof LoanApplicationLoanDetailsRoute
+  '/pay-loan/loan-paid': typeof PayLoanLoanPaidRoute
+  '/pay-loan/pay-through': typeof PayLoanPayThroughRoute
+  '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
+  '/payment-methods/add-card': typeof PaymentMethodsAddCardRoute
+  '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
-  '/authentication/forgot-password/forgot-password-0': typeof AuthenticationForgotPasswordForgotPassword0Route
+  '/update-phone/number-verified': typeof UpdatePhoneNumberVerifiedRoute
+  '/update-phone/verify-phone': typeof UpdatePhoneVerifyPhoneRoute
+  '/add-phone-number': typeof AddPhoneNumberIndexRoute
+  '/dashboard': typeof DashboardIndexRoute
+  '/delete-account': typeof DeleteAccountIndexRoute
+  '/loan-application': typeof LoanApplicationIndexRoute
+  '/notifications': typeof NotificationsIndexRoute
+  '/pay-loan': typeof PayLoanIndexRoute
+  '/payment-methods': typeof PaymentMethodsIndexRoute
+  '/refer-and-earn': typeof ReferAndEarnIndexRoute
+  '/update-phone': typeof UpdatePhoneIndexRoute
+  '/user-profile': typeof UserProfileIndexRoute
   '/authentication/forgot-password/forgot-password-1': typeof AuthenticationForgotPasswordForgotPassword1Route
   '/authentication/forgot-password/password-changed': typeof AuthenticationForgotPasswordPasswordChangedRoute
+  '/authentication/registration/account-created': typeof AuthenticationRegistrationAccountCreatedRoute
+  '/authentication/registration/create-password': typeof AuthenticationRegistrationCreatePasswordRoute
+  '/authentication/verify-email/email-verified': typeof AuthenticationVerifyEmailEmailVerifiedRoute
+  '/authentication/forgot-password': typeof AuthenticationForgotPasswordIndexRoute
+  '/authentication/registration': typeof AuthenticationRegistrationIndexRoute
+  '/authentication/verify-email': typeof AuthenticationVerifyEmailIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
+  '/add-phone-number/phone-number-added': typeof AddPhoneNumberPhoneNumberAddedRoute
+  '/delete-account/account-deleted': typeof DeleteAccountAccountDeletedRoute
+  '/delete-account/delete-using-phone': typeof DeleteAccountDeleteUsingPhoneRoute
+  '/loan-application/choose-emi': typeof LoanApplicationChooseEmiRoute
+  '/loan-application/loan-approved': typeof LoanApplicationLoanApprovedRoute
+  '/loan-application/loan-details': typeof LoanApplicationLoanDetailsRoute
+  '/pay-loan/loan-paid': typeof PayLoanLoanPaidRoute
+  '/pay-loan/pay-through': typeof PayLoanPayThroughRoute
+  '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
+  '/payment-methods/add-card': typeof PaymentMethodsAddCardRoute
+  '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
-  '/authentication/forgot-password/forgot-password-0': typeof AuthenticationForgotPasswordForgotPassword0Route
+  '/update-phone/number-verified': typeof UpdatePhoneNumberVerifiedRoute
+  '/update-phone/verify-phone': typeof UpdatePhoneVerifyPhoneRoute
+  '/add-phone-number/': typeof AddPhoneNumberIndexRoute
+  '/dashboard/': typeof DashboardIndexRoute
+  '/delete-account/': typeof DeleteAccountIndexRoute
+  '/loan-application/': typeof LoanApplicationIndexRoute
+  '/notifications/': typeof NotificationsIndexRoute
+  '/pay-loan/': typeof PayLoanIndexRoute
+  '/payment-methods/': typeof PaymentMethodsIndexRoute
+  '/refer-and-earn/': typeof ReferAndEarnIndexRoute
+  '/update-phone/': typeof UpdatePhoneIndexRoute
+  '/user-profile/': typeof UserProfileIndexRoute
   '/authentication/forgot-password/forgot-password-1': typeof AuthenticationForgotPasswordForgotPassword1Route
   '/authentication/forgot-password/password-changed': typeof AuthenticationForgotPasswordPasswordChangedRoute
+  '/authentication/registration/account-created': typeof AuthenticationRegistrationAccountCreatedRoute
+  '/authentication/registration/create-password': typeof AuthenticationRegistrationCreatePasswordRoute
+  '/authentication/verify-email/email-verified': typeof AuthenticationVerifyEmailEmailVerifiedRoute
+  '/authentication/forgot-password/': typeof AuthenticationForgotPasswordIndexRoute
+  '/authentication/registration/': typeof AuthenticationRegistrationIndexRoute
+  '/authentication/verify-email/': typeof AuthenticationVerifyEmailIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/sample'
+    | '/add-phone-number/phone-number-added'
+    | '/delete-account/account-deleted'
+    | '/delete-account/delete-using-phone'
+    | '/loan-application/choose-emi'
+    | '/loan-application/loan-approved'
+    | '/loan-application/loan-details'
+    | '/pay-loan/loan-paid'
+    | '/pay-loan/pay-through'
+    | '/pay-loan/review-details'
+    | '/payment-methods/add-card'
+    | '/payment-methods/card-added'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
-    | '/authentication/forgot-password/forgot-password-0'
+    | '/update-phone/number-verified'
+    | '/update-phone/verify-phone'
+    | '/add-phone-number'
+    | '/dashboard'
+    | '/delete-account'
+    | '/loan-application'
+    | '/notifications'
+    | '/pay-loan'
+    | '/payment-methods'
+    | '/refer-and-earn'
+    | '/update-phone'
+    | '/user-profile'
     | '/authentication/forgot-password/forgot-password-1'
     | '/authentication/forgot-password/password-changed'
+    | '/authentication/registration/account-created'
+    | '/authentication/registration/create-password'
+    | '/authentication/verify-email/email-verified'
+    | '/authentication/forgot-password'
+    | '/authentication/registration'
+    | '/authentication/verify-email'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/sample'
+    | '/add-phone-number/phone-number-added'
+    | '/delete-account/account-deleted'
+    | '/delete-account/delete-using-phone'
+    | '/loan-application/choose-emi'
+    | '/loan-application/loan-approved'
+    | '/loan-application/loan-details'
+    | '/pay-loan/loan-paid'
+    | '/pay-loan/pay-through'
+    | '/pay-loan/review-details'
+    | '/payment-methods/add-card'
+    | '/payment-methods/card-added'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
-    | '/authentication/forgot-password/forgot-password-0'
+    | '/update-phone/number-verified'
+    | '/update-phone/verify-phone'
+    | '/add-phone-number'
+    | '/dashboard'
+    | '/delete-account'
+    | '/loan-application'
+    | '/notifications'
+    | '/pay-loan'
+    | '/payment-methods'
+    | '/refer-and-earn'
+    | '/update-phone'
+    | '/user-profile'
     | '/authentication/forgot-password/forgot-password-1'
     | '/authentication/forgot-password/password-changed'
+    | '/authentication/registration/account-created'
+    | '/authentication/registration/create-password'
+    | '/authentication/verify-email/email-verified'
+    | '/authentication/forgot-password'
+    | '/authentication/registration'
+    | '/authentication/verify-email'
   id:
     | '__root__'
     | '/'
     | '/sample'
+    | '/add-phone-number/phone-number-added'
+    | '/delete-account/account-deleted'
+    | '/delete-account/delete-using-phone'
+    | '/loan-application/choose-emi'
+    | '/loan-application/loan-approved'
+    | '/loan-application/loan-details'
+    | '/pay-loan/loan-paid'
+    | '/pay-loan/pay-through'
+    | '/pay-loan/review-details'
+    | '/payment-methods/add-card'
+    | '/payment-methods/card-added'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
-    | '/authentication/forgot-password/forgot-password-0'
+    | '/update-phone/number-verified'
+    | '/update-phone/verify-phone'
+    | '/add-phone-number/'
+    | '/dashboard/'
+    | '/delete-account/'
+    | '/loan-application/'
+    | '/notifications/'
+    | '/pay-loan/'
+    | '/payment-methods/'
+    | '/refer-and-earn/'
+    | '/update-phone/'
+    | '/user-profile/'
     | '/authentication/forgot-password/forgot-password-1'
     | '/authentication/forgot-password/password-changed'
+    | '/authentication/registration/account-created'
+    | '/authentication/registration/create-password'
+    | '/authentication/verify-email/email-verified'
+    | '/authentication/forgot-password/'
+    | '/authentication/registration/'
+    | '/authentication/verify-email/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SampleRoute: typeof SampleRoute
+  AddPhoneNumberPhoneNumberAddedRoute: typeof AddPhoneNumberPhoneNumberAddedRoute
+  DeleteAccountAccountDeletedRoute: typeof DeleteAccountAccountDeletedRoute
+  DeleteAccountDeleteUsingPhoneRoute: typeof DeleteAccountDeleteUsingPhoneRoute
+  LoanApplicationChooseEmiRoute: typeof LoanApplicationChooseEmiRoute
+  LoanApplicationLoanApprovedRoute: typeof LoanApplicationLoanApprovedRoute
+  LoanApplicationLoanDetailsRoute: typeof LoanApplicationLoanDetailsRoute
+  PayLoanLoanPaidRoute: typeof PayLoanLoanPaidRoute
+  PayLoanPayThroughRoute: typeof PayLoanPayThroughRoute
+  PayLoanReviewDetailsRoute: typeof PayLoanReviewDetailsRoute
+  PaymentMethodsAddCardRoute: typeof PaymentMethodsAddCardRoute
+  PaymentMethodsCardAddedRoute: typeof PaymentMethodsCardAddedRoute
   TokuenInfoPrivacyPolicyRoute: typeof TokuenInfoPrivacyPolicyRoute
   TokuenInfoTermsAndConditionsRoute: typeof TokuenInfoTermsAndConditionsRoute
-  AuthenticationForgotPasswordForgotPassword0Route: typeof AuthenticationForgotPasswordForgotPassword0Route
+  UpdatePhoneNumberVerifiedRoute: typeof UpdatePhoneNumberVerifiedRoute
+  UpdatePhoneVerifyPhoneRoute: typeof UpdatePhoneVerifyPhoneRoute
+  AddPhoneNumberIndexRoute: typeof AddPhoneNumberIndexRoute
+  DashboardIndexRoute: typeof DashboardIndexRoute
+  DeleteAccountIndexRoute: typeof DeleteAccountIndexRoute
+  LoanApplicationIndexRoute: typeof LoanApplicationIndexRoute
+  NotificationsIndexRoute: typeof NotificationsIndexRoute
+  PayLoanIndexRoute: typeof PayLoanIndexRoute
+  PaymentMethodsIndexRoute: typeof PaymentMethodsIndexRoute
+  ReferAndEarnIndexRoute: typeof ReferAndEarnIndexRoute
+  UpdatePhoneIndexRoute: typeof UpdatePhoneIndexRoute
+  UserProfileIndexRoute: typeof UserProfileIndexRoute
   AuthenticationForgotPasswordForgotPassword1Route: typeof AuthenticationForgotPasswordForgotPassword1Route
   AuthenticationForgotPasswordPasswordChangedRoute: typeof AuthenticationForgotPasswordPasswordChangedRoute
+  AuthenticationRegistrationAccountCreatedRoute: typeof AuthenticationRegistrationAccountCreatedRoute
+  AuthenticationRegistrationCreatePasswordRoute: typeof AuthenticationRegistrationCreatePasswordRoute
+  AuthenticationVerifyEmailEmailVerifiedRoute: typeof AuthenticationVerifyEmailEmailVerifiedRoute
+  AuthenticationForgotPasswordIndexRoute: typeof AuthenticationForgotPasswordIndexRoute
+  AuthenticationRegistrationIndexRoute: typeof AuthenticationRegistrationIndexRoute
+  AuthenticationVerifyEmailIndexRoute: typeof AuthenticationVerifyEmailIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +517,90 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/user-profile/': {
+      id: '/user-profile/'
+      path: '/user-profile'
+      fullPath: '/user-profile'
+      preLoaderRoute: typeof UserProfileIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/update-phone/': {
+      id: '/update-phone/'
+      path: '/update-phone'
+      fullPath: '/update-phone'
+      preLoaderRoute: typeof UpdatePhoneIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refer-and-earn/': {
+      id: '/refer-and-earn/'
+      path: '/refer-and-earn'
+      fullPath: '/refer-and-earn'
+      preLoaderRoute: typeof ReferAndEarnIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment-methods/': {
+      id: '/payment-methods/'
+      path: '/payment-methods'
+      fullPath: '/payment-methods'
+      preLoaderRoute: typeof PaymentMethodsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pay-loan/': {
+      id: '/pay-loan/'
+      path: '/pay-loan'
+      fullPath: '/pay-loan'
+      preLoaderRoute: typeof PayLoanIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications/': {
+      id: '/notifications/'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loan-application/': {
+      id: '/loan-application/'
+      path: '/loan-application'
+      fullPath: '/loan-application'
+      preLoaderRoute: typeof LoanApplicationIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delete-account/': {
+      id: '/delete-account/'
+      path: '/delete-account'
+      fullPath: '/delete-account'
+      preLoaderRoute: typeof DeleteAccountIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/add-phone-number/': {
+      id: '/add-phone-number/'
+      path: '/add-phone-number'
+      fullPath: '/add-phone-number'
+      preLoaderRoute: typeof AddPhoneNumberIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/update-phone/verify-phone': {
+      id: '/update-phone/verify-phone'
+      path: '/update-phone/verify-phone'
+      fullPath: '/update-phone/verify-phone'
+      preLoaderRoute: typeof UpdatePhoneVerifyPhoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/update-phone/number-verified': {
+      id: '/update-phone/number-verified'
+      path: '/update-phone/number-verified'
+      fullPath: '/update-phone/number-verified'
+      preLoaderRoute: typeof UpdatePhoneNumberVerifiedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tokuen-info/terms-and-conditions': {
       id: '/tokuen-info/terms-and-conditions'
       path: '/tokuen-info/terms-and-conditions'
@@ -153,6 +613,125 @@ declare module '@tanstack/react-router' {
       path: '/tokuen-info/privacy-policy'
       fullPath: '/tokuen-info/privacy-policy'
       preLoaderRoute: typeof TokuenInfoPrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment-methods/card-added': {
+      id: '/payment-methods/card-added'
+      path: '/payment-methods/card-added'
+      fullPath: '/payment-methods/card-added'
+      preLoaderRoute: typeof PaymentMethodsCardAddedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment-methods/add-card': {
+      id: '/payment-methods/add-card'
+      path: '/payment-methods/add-card'
+      fullPath: '/payment-methods/add-card'
+      preLoaderRoute: typeof PaymentMethodsAddCardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pay-loan/review-details': {
+      id: '/pay-loan/review-details'
+      path: '/pay-loan/review-details'
+      fullPath: '/pay-loan/review-details'
+      preLoaderRoute: typeof PayLoanReviewDetailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pay-loan/pay-through': {
+      id: '/pay-loan/pay-through'
+      path: '/pay-loan/pay-through'
+      fullPath: '/pay-loan/pay-through'
+      preLoaderRoute: typeof PayLoanPayThroughRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pay-loan/loan-paid': {
+      id: '/pay-loan/loan-paid'
+      path: '/pay-loan/loan-paid'
+      fullPath: '/pay-loan/loan-paid'
+      preLoaderRoute: typeof PayLoanLoanPaidRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loan-application/loan-details': {
+      id: '/loan-application/loan-details'
+      path: '/loan-application/loan-details'
+      fullPath: '/loan-application/loan-details'
+      preLoaderRoute: typeof LoanApplicationLoanDetailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loan-application/loan-approved': {
+      id: '/loan-application/loan-approved'
+      path: '/loan-application/loan-approved'
+      fullPath: '/loan-application/loan-approved'
+      preLoaderRoute: typeof LoanApplicationLoanApprovedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loan-application/choose-emi': {
+      id: '/loan-application/choose-emi'
+      path: '/loan-application/choose-emi'
+      fullPath: '/loan-application/choose-emi'
+      preLoaderRoute: typeof LoanApplicationChooseEmiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delete-account/delete-using-phone': {
+      id: '/delete-account/delete-using-phone'
+      path: '/delete-account/delete-using-phone'
+      fullPath: '/delete-account/delete-using-phone'
+      preLoaderRoute: typeof DeleteAccountDeleteUsingPhoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delete-account/account-deleted': {
+      id: '/delete-account/account-deleted'
+      path: '/delete-account/account-deleted'
+      fullPath: '/delete-account/account-deleted'
+      preLoaderRoute: typeof DeleteAccountAccountDeletedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/add-phone-number/phone-number-added': {
+      id: '/add-phone-number/phone-number-added'
+      path: '/add-phone-number/phone-number-added'
+      fullPath: '/add-phone-number/phone-number-added'
+      preLoaderRoute: typeof AddPhoneNumberPhoneNumberAddedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/verify-email/': {
+      id: '/authentication/verify-email/'
+      path: '/authentication/verify-email'
+      fullPath: '/authentication/verify-email'
+      preLoaderRoute: typeof AuthenticationVerifyEmailIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/registration/': {
+      id: '/authentication/registration/'
+      path: '/authentication/registration'
+      fullPath: '/authentication/registration'
+      preLoaderRoute: typeof AuthenticationRegistrationIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/forgot-password/': {
+      id: '/authentication/forgot-password/'
+      path: '/authentication/forgot-password'
+      fullPath: '/authentication/forgot-password'
+      preLoaderRoute: typeof AuthenticationForgotPasswordIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/verify-email/email-verified': {
+      id: '/authentication/verify-email/email-verified'
+      path: '/authentication/verify-email/email-verified'
+      fullPath: '/authentication/verify-email/email-verified'
+      preLoaderRoute: typeof AuthenticationVerifyEmailEmailVerifiedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/registration/create-password': {
+      id: '/authentication/registration/create-password'
+      path: '/authentication/registration/create-password'
+      fullPath: '/authentication/registration/create-password'
+      preLoaderRoute: typeof AuthenticationRegistrationCreatePasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication/registration/account-created': {
+      id: '/authentication/registration/account-created'
+      path: '/authentication/registration/account-created'
+      fullPath: '/authentication/registration/account-created'
+      preLoaderRoute: typeof AuthenticationRegistrationAccountCreatedRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/authentication/forgot-password/password-changed': {
@@ -169,27 +748,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticationForgotPasswordForgotPassword1RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/authentication/forgot-password/forgot-password-0': {
-      id: '/authentication/forgot-password/forgot-password-0'
-      path: '/authentication/forgot-password/forgot-password-0'
-      fullPath: '/authentication/forgot-password/forgot-password-0'
-      preLoaderRoute: typeof AuthenticationForgotPasswordForgotPassword0RouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SampleRoute: SampleRoute,
+  AddPhoneNumberPhoneNumberAddedRoute: AddPhoneNumberPhoneNumberAddedRoute,
+  DeleteAccountAccountDeletedRoute: DeleteAccountAccountDeletedRoute,
+  DeleteAccountDeleteUsingPhoneRoute: DeleteAccountDeleteUsingPhoneRoute,
+  LoanApplicationChooseEmiRoute: LoanApplicationChooseEmiRoute,
+  LoanApplicationLoanApprovedRoute: LoanApplicationLoanApprovedRoute,
+  LoanApplicationLoanDetailsRoute: LoanApplicationLoanDetailsRoute,
+  PayLoanLoanPaidRoute: PayLoanLoanPaidRoute,
+  PayLoanPayThroughRoute: PayLoanPayThroughRoute,
+  PayLoanReviewDetailsRoute: PayLoanReviewDetailsRoute,
+  PaymentMethodsAddCardRoute: PaymentMethodsAddCardRoute,
+  PaymentMethodsCardAddedRoute: PaymentMethodsCardAddedRoute,
   TokuenInfoPrivacyPolicyRoute: TokuenInfoPrivacyPolicyRoute,
   TokuenInfoTermsAndConditionsRoute: TokuenInfoTermsAndConditionsRoute,
-  AuthenticationForgotPasswordForgotPassword0Route:
-    AuthenticationForgotPasswordForgotPassword0Route,
+  UpdatePhoneNumberVerifiedRoute: UpdatePhoneNumberVerifiedRoute,
+  UpdatePhoneVerifyPhoneRoute: UpdatePhoneVerifyPhoneRoute,
+  AddPhoneNumberIndexRoute: AddPhoneNumberIndexRoute,
+  DashboardIndexRoute: DashboardIndexRoute,
+  DeleteAccountIndexRoute: DeleteAccountIndexRoute,
+  LoanApplicationIndexRoute: LoanApplicationIndexRoute,
+  NotificationsIndexRoute: NotificationsIndexRoute,
+  PayLoanIndexRoute: PayLoanIndexRoute,
+  PaymentMethodsIndexRoute: PaymentMethodsIndexRoute,
+  ReferAndEarnIndexRoute: ReferAndEarnIndexRoute,
+  UpdatePhoneIndexRoute: UpdatePhoneIndexRoute,
+  UserProfileIndexRoute: UserProfileIndexRoute,
   AuthenticationForgotPasswordForgotPassword1Route:
     AuthenticationForgotPasswordForgotPassword1Route,
   AuthenticationForgotPasswordPasswordChangedRoute:
     AuthenticationForgotPasswordPasswordChangedRoute,
+  AuthenticationRegistrationAccountCreatedRoute:
+    AuthenticationRegistrationAccountCreatedRoute,
+  AuthenticationRegistrationCreatePasswordRoute:
+    AuthenticationRegistrationCreatePasswordRoute,
+  AuthenticationVerifyEmailEmailVerifiedRoute:
+    AuthenticationVerifyEmailEmailVerifiedRoute,
+  AuthenticationForgotPasswordIndexRoute:
+    AuthenticationForgotPasswordIndexRoute,
+  AuthenticationRegistrationIndexRoute: AuthenticationRegistrationIndexRoute,
+  AuthenticationVerifyEmailIndexRoute: AuthenticationVerifyEmailIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

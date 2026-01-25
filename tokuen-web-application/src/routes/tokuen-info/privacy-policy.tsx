@@ -7,25 +7,26 @@ export const Route = createFileRoute('/tokuen-info/privacy-policy')({
 
 function PrivacyPolicy() {
     return <>
-        <div className="flex flex-col h-screen w-screen m-0 p-0">
+        <div className="page">
         
             {/**Content */}
             <section className='flex flex-1 w-full h-full bg-linear-to-b from-indigo-900 to-purple-900'>
         
               {/**Left side */}
-              <div className='sticky flex flex-1 flex-col w-[40%] pt-16 h-full border-r-2 border-r-(--white)'>
+              <div className='sticky flex flex-1 flex-col w-[40%] pt-16 h-full border-r-2 border-r-white'>
                 <div className='flex flex-col relative w-[50%] h-[75%] right-0 top-0 self-end gap-2'>
                   <div className='flex flex-[0 1 auto] flex-row w-2/6 h-16 items-center'>
                     <GenHeader
                       img={'./../../../public/resources/tokuen-colored.png'}
                       text={'TOKUEN'}
                       textColor={'white'}
+                      width={'3rem'}
                     />
                   </div>
-                  <div className='flex flex-[0 1 auto] flex-col text-(--white) font-semibold'>
+                  <div className='flex flex-[0 1 auto] text-white pl-[15%] font-semibold items-center gap-5 justify-start'>
                     <p className='text-3xl'>Privacy Policy</p>
                   </div>
-                  <div className='flex flex-[0 1 auto] flex-col self-start pr-12 text-x font-semibold text-(--white)'>
+                  <div className='flex flex-[0 1 auto] flex-col self-start pl-10 pr-12 text-x font-semibold text-white'>
                     <ol className='list-none'>
                       <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#first-pp'>Interpretations and Definitions</a></li>
                       <li className='flex-1 cursor-pointer hover:bg-indigo-950 p-0 rounded-xl'><a className='inline-block p-3 w-full' href='#second-pp'>Collection and using your personal data</a></li>
@@ -41,7 +42,7 @@ function PrivacyPolicy() {
               </div>
         
               {/**Right side */}
-              <div className='flex flex-1 flex-col w-[60%] h-full text-(--white) pt-16 pl-16 pr-8 pb-16 overflow-y-auto scroll-smooth'>
+              <div className='flex flex-1 flex-col w-[60%] h-full text-white pt-16 pl-16 pr-8 pb-16 overflow-y-auto scroll-smooth'>
                 <div className='flex-1 w-[60%]'>
                   <h1>Effective Nov 10, 2025</h1>
                   <p className='flex-0 cursor-pointer hover:underline font-semibold text-(--subheader-two)'><a href=''>view printable version</a></p>
