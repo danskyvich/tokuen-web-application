@@ -120,12 +120,12 @@ function RouteComponent() {
         />
         <BottomButtons
           text='Settings'
-          url=''
+          url='/settings/'
           icon={<SettingsIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
         />
         <BottomButtons
           text='Help'
-          url=''
+          url='/help/'
           icon={<HelpIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
         />
       </div>

@@ -6,14 +6,14 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { IconButton } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import { PurpleContainer } from '../../components/purple-container';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
 
 export const Route = createFileRoute('/refer-and-earn/')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
-  return <div className='page justify-center items-center'>
+  return <div className='page'>
     <Header
       text='TOKUEN'
       img={'./../../../favicon.png'}
@@ -21,50 +21,41 @@ function RouteComponent() {
     />
 
     {/**Content */}
-    <section className='flex flex-1 flex-col h-full w-[50%] py-15 gap-5'>
+    <section className='flex flex-1 flex-col w-full h-full px-[20%] py-5 items-center justify-center'>
 
-      <span className='flex-auto h-full'/>
+      {/**Card */}
+      <div className='flex flex-1 flex-col px-10 py-5 w-[80%] h-fit items-center justify-center text-center rounded-xl bg-stone-200 gap-5'>
+        <div className='flex flex-2 items-center justify-center'>
+          <Diversity3Icon sx={{fontSize: '15rem'}}/></div>
+        <p className='flex flex-1 text-3xl font-semibold'>Refer to your friend and get a cash prize of ₱50</p>
+        <p className='flex flex-1 text-xl w-[70%] h-fit'>Share this code with a friend and after they install, both of you will receive a ₱50 cash reward! Cash rewards will be credited directly into your account.</p>
 
-      {/**Svg image here */}
-      <div className='flex flex-1 h-[40dvh] w-full'>
+        {/** Code */}
+        <div className='flex flex-1 w-full h-fit rounded-3xl gap-5 bg-linear-90 from-indigo-800 to-fuchsia-900 text-white items-center justify-center p-5'>
+          <p className='text-6xl font-semibold'>BANFF</p>
+          <IconButton><ContentCopyIcon sx={{fontSize: '4rem', color: 'white'}}/></IconButton>
+        </div>
 
-      </div>
-
-      {/**Code and text */}
-      <div className='flex flex-1 flex-col h-fit w-full bg-stone-200 rounded-3xl shadow-xl'>
-        <p className='flex flex-1 py-5 justify-center font-bold text-3xl'>Refer to your friends and get a cash prize of Php 50.</p>
-        <p className='flex flex-1 text-center text-(--subheader) text-xl w-[60%] self-center'>Share this code with a friend and after they install, both of you will receive a ₱50 cash reward! Cash rewards will be credited 
-          directly into your account.</p>
-
-          {/**Code */}
-        <div className='flex flex-[0 1 auto] flex-row w-[70%] h-fit bg-linear-to-r from-violet-600 to-fuchsia-700 self-center items-center justify-center my-6 py-5 rounded-2xl shadow-2xl'>
-          <p className='text-white text-4xl font-semibold'>BANFF</p> {/**Code is unique per user */}
-          <div className=''>
-            <IconButton
-              children={<ContentCopyIcon sx={{fontSize: '3rem', color: 'white'}}/>}
-            />
+        {/**Instructions */}
+        <div className='flex flex-1 p-5 w-full h-fit bg-linear-90 from-fuchsia-700 to-fuchsia-900 rounded-xl text-white'>
+          <div className='flex flex-1 flex-col items-center justify-center'>
+            <ContentCopyIcon sx={{fontSize: '2rem'}}/>
+            <p>Copy link</p>
+          </div>
+          <div className='flex flex-1 flex-col items-center justify-center'>
+            <CheckCircleOutlineIcon sx={{fontSize: '2rem'}}/>
+            <p>Friend registered successfully</p>
+          </div>
+          <div className='flex flex-1 flex-col items-center justify-center'>
+            <AttachMoneyIcon sx={{fontSize: '2rem'}}/>
+            <p>Earn cash reward</p>
           </div>
         </div>
+
+        <span className='flex-auto h-full'/>
       </div>
 
-      <PurpleContainer>
-          <>
-            <div className='flex flex-1 flex-col w-fit h-full items-center text-center leading-4 gap-1'>
-              <ContentCopyIcon sx={{fontSize: '3rem'}}/>
-              <p>Copy Link</p>
-            </div>
-            <div className='flex flex-1 flex-col w-fit h-full items-center text-center leading-4 gap-1'>
-              <CheckCircleOutlineIcon sx={{fontSize: '3rem'}}/>
-              <p>Friend registered <br/>successfully</p>
-            </div>
-            <div className='flex flex-1 flex-col w-fit h-full items-center text-center leading-4 gap-1'>
-              <AttachMoneyIcon sx={{fontSize: '3rem'}}/>
-              <p className='justify-self-start'>Earn cash rewards</p>
-            </div>
-          </>
-         </PurpleContainer>
-
-         <span className='flex-1 h-full'/>
+      <span className='flex-auto h-full'/>
     </section>
   </div>
 }

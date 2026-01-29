@@ -14,11 +14,13 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as VerifyIdentityIndexRouteImport } from './routes/verify-identity/index'
 import { Route as UserProfileIndexRouteImport } from './routes/user-profile/index'
 import { Route as UpdatePhoneIndexRouteImport } from './routes/update-phone/index'
+import { Route as SettingsIndexRouteImport } from './routes/settings/index'
 import { Route as ReferAndEarnIndexRouteImport } from './routes/refer-and-earn/index'
 import { Route as PaymentMethodsIndexRouteImport } from './routes/payment-methods/index'
 import { Route as PayLoanIndexRouteImport } from './routes/pay-loan/index'
 import { Route as NotificationsIndexRouteImport } from './routes/notifications/index'
 import { Route as LoanApplicationIndexRouteImport } from './routes/loan-application/index'
+import { Route as HelpCenterIndexRouteImport } from './routes/help-center/index'
 import { Route as DeleteAccountIndexRouteImport } from './routes/delete-account/index'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as CalculatorIndexRouteImport } from './routes/calculator/index'
@@ -40,6 +42,7 @@ import { Route as PaymentMethodsAddCardRouteImport } from './routes/payment-meth
 import { Route as PayLoanReviewDetailsRouteImport } from './routes/pay-loan/review-details'
 import { Route as PayLoanPayThroughRouteImport } from './routes/pay-loan/pay-through'
 import { Route as PayLoanLoanPaidRouteImport } from './routes/pay-loan/loan-paid'
+import { Route as NotificationsEmptyRouteImport } from './routes/notifications/empty'
 import { Route as LoansLoanListRouteImport } from './routes/loans/loan-list'
 import { Route as LoanApplicationLoanDetailsRouteImport } from './routes/loan-application/loan-details'
 import { Route as LoanApplicationLoanApprovedRouteImport } from './routes/loan-application/loan-approved'
@@ -81,6 +84,11 @@ const UpdatePhoneIndexRoute = UpdatePhoneIndexRouteImport.update({
   path: '/update-phone/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SettingsIndexRoute = SettingsIndexRouteImport.update({
+  id: '/settings/',
+  path: '/settings/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReferAndEarnIndexRoute = ReferAndEarnIndexRouteImport.update({
   id: '/refer-and-earn/',
   path: '/refer-and-earn/',
@@ -104,6 +112,11 @@ const NotificationsIndexRoute = NotificationsIndexRouteImport.update({
 const LoanApplicationIndexRoute = LoanApplicationIndexRouteImport.update({
   id: '/loan-application/',
   path: '/loan-application/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpCenterIndexRoute = HelpCenterIndexRouteImport.update({
+  id: '/help-center/',
+  path: '/help-center/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DeleteAccountIndexRoute = DeleteAccountIndexRouteImport.update({
@@ -218,6 +231,11 @@ const PayLoanLoanPaidRoute = PayLoanLoanPaidRouteImport.update({
   path: '/pay-loan/loan-paid',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NotificationsEmptyRoute = NotificationsEmptyRouteImport.update({
+  id: '/notifications/empty',
+  path: '/notifications/empty',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LoansLoanListRoute = LoansLoanListRouteImport.update({
   id: '/loans/loan-list',
   path: '/loans/loan-list',
@@ -318,6 +336,7 @@ export interface FileRoutesByFullPath {
   '/loan-application/loan-approved': typeof LoanApplicationLoanApprovedRoute
   '/loan-application/loan-details': typeof LoanApplicationLoanDetailsRoute
   '/loans/loan-list': typeof LoansLoanListRoute
+  '/notifications/empty': typeof NotificationsEmptyRoute
   '/pay-loan/loan-paid': typeof PayLoanLoanPaidRoute
   '/pay-loan/pay-through': typeof PayLoanPayThroughRoute
   '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
@@ -339,11 +358,13 @@ export interface FileRoutesByFullPath {
   '/calculator': typeof CalculatorIndexRoute
   '/dashboard': typeof DashboardIndexRoute
   '/delete-account': typeof DeleteAccountIndexRoute
+  '/help-center': typeof HelpCenterIndexRoute
   '/loan-application': typeof LoanApplicationIndexRoute
   '/notifications': typeof NotificationsIndexRoute
   '/pay-loan': typeof PayLoanIndexRoute
   '/payment-methods': typeof PaymentMethodsIndexRoute
   '/refer-and-earn': typeof ReferAndEarnIndexRoute
+  '/settings': typeof SettingsIndexRoute
   '/update-phone': typeof UpdatePhoneIndexRoute
   '/user-profile': typeof UserProfileIndexRoute
   '/verify-identity': typeof VerifyIdentityIndexRoute
@@ -366,6 +387,7 @@ export interface FileRoutesByTo {
   '/loan-application/loan-approved': typeof LoanApplicationLoanApprovedRoute
   '/loan-application/loan-details': typeof LoanApplicationLoanDetailsRoute
   '/loans/loan-list': typeof LoansLoanListRoute
+  '/notifications/empty': typeof NotificationsEmptyRoute
   '/pay-loan/loan-paid': typeof PayLoanLoanPaidRoute
   '/pay-loan/pay-through': typeof PayLoanPayThroughRoute
   '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
@@ -387,11 +409,13 @@ export interface FileRoutesByTo {
   '/calculator': typeof CalculatorIndexRoute
   '/dashboard': typeof DashboardIndexRoute
   '/delete-account': typeof DeleteAccountIndexRoute
+  '/help-center': typeof HelpCenterIndexRoute
   '/loan-application': typeof LoanApplicationIndexRoute
   '/notifications': typeof NotificationsIndexRoute
   '/pay-loan': typeof PayLoanIndexRoute
   '/payment-methods': typeof PaymentMethodsIndexRoute
   '/refer-and-earn': typeof ReferAndEarnIndexRoute
+  '/settings': typeof SettingsIndexRoute
   '/update-phone': typeof UpdatePhoneIndexRoute
   '/user-profile': typeof UserProfileIndexRoute
   '/verify-identity': typeof VerifyIdentityIndexRoute
@@ -415,6 +439,7 @@ export interface FileRoutesById {
   '/loan-application/loan-approved': typeof LoanApplicationLoanApprovedRoute
   '/loan-application/loan-details': typeof LoanApplicationLoanDetailsRoute
   '/loans/loan-list': typeof LoansLoanListRoute
+  '/notifications/empty': typeof NotificationsEmptyRoute
   '/pay-loan/loan-paid': typeof PayLoanLoanPaidRoute
   '/pay-loan/pay-through': typeof PayLoanPayThroughRoute
   '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
@@ -436,11 +461,13 @@ export interface FileRoutesById {
   '/calculator/': typeof CalculatorIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/delete-account/': typeof DeleteAccountIndexRoute
+  '/help-center/': typeof HelpCenterIndexRoute
   '/loan-application/': typeof LoanApplicationIndexRoute
   '/notifications/': typeof NotificationsIndexRoute
   '/pay-loan/': typeof PayLoanIndexRoute
   '/payment-methods/': typeof PaymentMethodsIndexRoute
   '/refer-and-earn/': typeof ReferAndEarnIndexRoute
+  '/settings/': typeof SettingsIndexRoute
   '/update-phone/': typeof UpdatePhoneIndexRoute
   '/user-profile/': typeof UserProfileIndexRoute
   '/verify-identity/': typeof VerifyIdentityIndexRoute
@@ -465,6 +492,7 @@ export interface FileRouteTypes {
     | '/loan-application/loan-approved'
     | '/loan-application/loan-details'
     | '/loans/loan-list'
+    | '/notifications/empty'
     | '/pay-loan/loan-paid'
     | '/pay-loan/pay-through'
     | '/pay-loan/review-details'
@@ -486,11 +514,13 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/dashboard'
     | '/delete-account'
+    | '/help-center'
     | '/loan-application'
     | '/notifications'
     | '/pay-loan'
     | '/payment-methods'
     | '/refer-and-earn'
+    | '/settings'
     | '/update-phone'
     | '/user-profile'
     | '/verify-identity'
@@ -513,6 +543,7 @@ export interface FileRouteTypes {
     | '/loan-application/loan-approved'
     | '/loan-application/loan-details'
     | '/loans/loan-list'
+    | '/notifications/empty'
     | '/pay-loan/loan-paid'
     | '/pay-loan/pay-through'
     | '/pay-loan/review-details'
@@ -534,11 +565,13 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/dashboard'
     | '/delete-account'
+    | '/help-center'
     | '/loan-application'
     | '/notifications'
     | '/pay-loan'
     | '/payment-methods'
     | '/refer-and-earn'
+    | '/settings'
     | '/update-phone'
     | '/user-profile'
     | '/verify-identity'
@@ -561,6 +594,7 @@ export interface FileRouteTypes {
     | '/loan-application/loan-approved'
     | '/loan-application/loan-details'
     | '/loans/loan-list'
+    | '/notifications/empty'
     | '/pay-loan/loan-paid'
     | '/pay-loan/pay-through'
     | '/pay-loan/review-details'
@@ -582,11 +616,13 @@ export interface FileRouteTypes {
     | '/calculator/'
     | '/dashboard/'
     | '/delete-account/'
+    | '/help-center/'
     | '/loan-application/'
     | '/notifications/'
     | '/pay-loan/'
     | '/payment-methods/'
     | '/refer-and-earn/'
+    | '/settings/'
     | '/update-phone/'
     | '/user-profile/'
     | '/verify-identity/'
@@ -610,6 +646,7 @@ export interface RootRouteChildren {
   LoanApplicationLoanApprovedRoute: typeof LoanApplicationLoanApprovedRoute
   LoanApplicationLoanDetailsRoute: typeof LoanApplicationLoanDetailsRoute
   LoansLoanListRoute: typeof LoansLoanListRoute
+  NotificationsEmptyRoute: typeof NotificationsEmptyRoute
   PayLoanLoanPaidRoute: typeof PayLoanLoanPaidRoute
   PayLoanPayThroughRoute: typeof PayLoanPayThroughRoute
   PayLoanReviewDetailsRoute: typeof PayLoanReviewDetailsRoute
@@ -631,11 +668,13 @@ export interface RootRouteChildren {
   CalculatorIndexRoute: typeof CalculatorIndexRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
   DeleteAccountIndexRoute: typeof DeleteAccountIndexRoute
+  HelpCenterIndexRoute: typeof HelpCenterIndexRoute
   LoanApplicationIndexRoute: typeof LoanApplicationIndexRoute
   NotificationsIndexRoute: typeof NotificationsIndexRoute
   PayLoanIndexRoute: typeof PayLoanIndexRoute
   PaymentMethodsIndexRoute: typeof PaymentMethodsIndexRoute
   ReferAndEarnIndexRoute: typeof ReferAndEarnIndexRoute
+  SettingsIndexRoute: typeof SettingsIndexRoute
   UpdatePhoneIndexRoute: typeof UpdatePhoneIndexRoute
   UserProfileIndexRoute: typeof UserProfileIndexRoute
   VerifyIdentityIndexRoute: typeof VerifyIdentityIndexRoute
@@ -686,6 +725,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UpdatePhoneIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/settings/': {
+      id: '/settings/'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/refer-and-earn/': {
       id: '/refer-and-earn/'
       path: '/refer-and-earn'
@@ -719,6 +765,13 @@ declare module '@tanstack/react-router' {
       path: '/loan-application'
       fullPath: '/loan-application'
       preLoaderRoute: typeof LoanApplicationIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help-center/': {
+      id: '/help-center/'
+      path: '/help-center'
+      fullPath: '/help-center'
+      preLoaderRoute: typeof HelpCenterIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/delete-account/': {
@@ -868,6 +921,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PayLoanLoanPaidRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/notifications/empty': {
+      id: '/notifications/empty'
+      path: '/notifications/empty'
+      fullPath: '/notifications/empty'
+      preLoaderRoute: typeof NotificationsEmptyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/loans/loan-list': {
       id: '/loans/loan-list'
       path: '/loans/loan-list'
@@ -986,6 +1046,7 @@ const rootRouteChildren: RootRouteChildren = {
   LoanApplicationLoanApprovedRoute: LoanApplicationLoanApprovedRoute,
   LoanApplicationLoanDetailsRoute: LoanApplicationLoanDetailsRoute,
   LoansLoanListRoute: LoansLoanListRoute,
+  NotificationsEmptyRoute: NotificationsEmptyRoute,
   PayLoanLoanPaidRoute: PayLoanLoanPaidRoute,
   PayLoanPayThroughRoute: PayLoanPayThroughRoute,
   PayLoanReviewDetailsRoute: PayLoanReviewDetailsRoute,
@@ -1009,11 +1070,13 @@ const rootRouteChildren: RootRouteChildren = {
   CalculatorIndexRoute: CalculatorIndexRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   DeleteAccountIndexRoute: DeleteAccountIndexRoute,
+  HelpCenterIndexRoute: HelpCenterIndexRoute,
   LoanApplicationIndexRoute: LoanApplicationIndexRoute,
   NotificationsIndexRoute: NotificationsIndexRoute,
   PayLoanIndexRoute: PayLoanIndexRoute,
   PaymentMethodsIndexRoute: PaymentMethodsIndexRoute,
   ReferAndEarnIndexRoute: ReferAndEarnIndexRoute,
+  SettingsIndexRoute: SettingsIndexRoute,
   UpdatePhoneIndexRoute: UpdatePhoneIndexRoute,
   UserProfileIndexRoute: UserProfileIndexRoute,
   VerifyIdentityIndexRoute: VerifyIdentityIndexRoute,
