@@ -3,42 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms and Conditions</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Terms and Conditions - TOKUEN</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- Top Header -->
     <header class="top-header">
-      <img src="your-logo.png" alt="TOKUEN Logo" />
-      <div class="brand-text">TOKUEN</div>
+      <div class="header">
+        <div class="logo-div">
+            <div class="logo-pic">
+                <img src="../images/tokuen_logo.png">
+            </div>
+            <div class="logo">TOKUEN</div>
+        </div>
+        <div class="user">
+            <div class="bell"><img src="../images/bell-alert-img-transparent.png"></div>
+            <div class="avatar">JC</div>
+        </div> 
+      </div>
     </header>
-
-    <!-- Gradient Main Area -->
+<!-- Gradient Main Area -->
     <div class="main-wrapper">
       <div class="terms-container">
         <!-- Left Column -->
-        <aside class="terms-left">
-          <div class="back-row">
-            <span class="back-arrow">&#60;</span>
-            <span>Terms and Conditions</span>
-          </div>
-
-          <h1 class="left-title">Terms and Conditions</h1>
-
-          <ul class="left-list">
-            <li>1. Your Agreement</li>
-            <li>2. Privacy</li>
-            <li>3. Linked Sites</li>
-            <li>4. Forward Looking Statements</li>
-            <li>5. Disclaimer of Warranties and Limitations of Liabilities</li>
-            <li>6. Exclusions and Limitations</li>
-            <li>7. Our Proprietary Rights</li>
-            <li>8. Indemnity</li>
-            <li>9. Copyright and Trademark Notice</li>
-            <li>10. Intellectual Property and Infringement Case</li>
-          </ul>
-        </aside>
-
+      <div class="left" id="leftPanel">
+        <div class="back-row">
+          <span class="back-arrow">&#60;</span>
+          <span>Back</span>
+        </div>
+        <div class="left-header" onclick="toggleDropdown()">
+          <h1>Terms and Conditions</h1>
+          <div class="dropdown-icon" id="dropdown-icon">▼</div>
+        </div>
+        <ul class="nav">
+          <li>1. Your Agreement</li>
+          <li>2. Privacy</li>
+          <li>3. Linked Sites</li>
+          <li>4. Forward Looking Statements</li>
+          <li>5. Disclaimer of Warranties and Limitations of Liabilities</li>
+          <li>6. Exclusions and Limitations</li>
+          <li>7. Our Proprietary Rights</li>
+          <li>8. Indemnity</li>
+          <li>9. Copyright and Trademark Notice</li>
+          <li>10. Intellectual Property and Infringement Case</li>
+        </ul>
+      </div>
         <!-- Right Column -->
         <main class="terms-right">
           <div class="effective-row">
@@ -203,5 +212,13 @@
         </main>
       </div>
     </div>
+    <script>
+      function toggleDropdown() {
+        if (window.innerWidth <= 900) {
+          document.getElementById("leftPanel").classList.toggle("open"); 
+          document.getElementById("dropdown-icon").classList.toggle("rotate");
+        }
+      }
+    </script>
   </body>
 </html>

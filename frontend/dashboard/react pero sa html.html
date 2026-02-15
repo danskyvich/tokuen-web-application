@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="dashboard">
+
+  <header>
+    <h1>Good morning, Juan</h1>
+    <span id="date"></span>
+  </header>
+
+  <section class="cards">
+    <div class="card"><h2>02</h2><p>Total approved</p></div>
+    <div class="card"><h2>01</h2><p>Loans under review</p></div>
+    <div class="card"><h2>02</h2><p>Loans in progress</p></div>
+  </section>
+
+  <section class="content">
+    <div class="transactions">
+      <div class="transactions-header">
+        <span>Transactions</span><span>›</span>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Amount</th><th>Date</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tx-type"><div class="tx-icon">💳</div>Loan payment</td>
+            <td class="tx-amount">₱5,400.00</td>
+            <td>Nov 12</td>
+          </tr>
+          <tr>
+            <td class="tx-type"><div class="tx-icon">🏦</div>Bank transfer</td>
+            <td class="tx-amount">₱12,000.00</td>
+            <td>Nov 5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="wallet">
+      <div class="wallet-header">
+        <p>Main Wallet</p>
+        <p style="font-size:12px;opacity:.8">Current balance</p>
+        <h2>₱10,000.00</h2>
+      </div>
+
+      <div class="wallet-actions">
+        <div><div class="icon">＋</div><p>Top Up</p></div>
+        <div><div class="icon">⧉</div><p>Transfer</p></div>
+        <div><div class="icon">💳</div><p>Loan</p></div>
+      </div>
+
+      <p class="wallet-note">
+        Wallet limit is ₱100,000. Verify your account to increase the limit.
+      </p>
+    </div>
+  </section>
+
+  <!-- PURPLE CARDS -->
+  <section class="promo-row">
+    <div class="promo-card">
+      <div>
+        <h3>Apply for a loan now!</h3>
+        <p>Get access to easy credit to save and secure your future.</p>
+      </div>
+      <button>Apply now</button>
+    </div>
+
+    <div class="promo-card">
+      <h3>Inflows and outflows</h3>
+
+      <div class="progress">
+        <span class="label">₱56,000</span>
+        <div class="bar inflow-bar"></div>
+      </div>
+
+      <div class="progress">
+        <span class="label">₱49,000</span>
+        <div class="bar outflow-bar"></div>
+      </div>
+
+      <p class="promo-note">
+        You earned ₱56,000 in total deposits and withdrew ₱49,000 in the last 6 months.
+      </p>
+    </div>
+  </section>
+
+  <section class="chart">
+    <h3>Inflows and Outflows</h3>
+    <canvas id="barChart" height="100"></canvas>
+  </section>
+
+  <footer>
+    © 2025 Tonik Digital Bank. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('date').innerText = new Date().toDateString();
+
+  new Chart(document.getElementById('barChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Nov 1','Nov 5','Nov 10','Nov 15','Nov 20','Nov 25'],
+      datasets: [
+        { label: 'Inflows', data: [5000,8000,12000,7000,9000,11000] },
+        { label: 'Outflows', data: [3000,4000,6000,5000,6500,7000] }
+      ]
+    },
+    options: { responsive: true }
+  });
+</script>
+</body>
+</html>

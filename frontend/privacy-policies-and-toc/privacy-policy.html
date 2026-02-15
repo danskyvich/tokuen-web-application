@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy and Policy</title>
-    <link rel="stylesheet" href="style.css" />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Privacy Policy - TOKUEN</title>
+      <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- Top Header -->
     <header class="top-header">
-      <img src="your-logo.png" alt="TOKUEN Logo" />
-      <div class="brand-text">TOKUEN</div>
+      <div class="header">
+        <div class="logo-div">
+            <div class="logo-pic">
+                <img src="../images/tokuen_logo.png">
+            </div>
+            <div class="logo">TOKUEN</div>
+        </div>
+        <div class="user">
+            <div class="bell"><img src="../images/bell-alert-img-transparent.png"></div>
+            <div class="avatar">JC</div>
+        </div> 
+      </div>
     </header>
-
     <!-- Gradient Main Area -->
     <div class="main-wrapper">
       <div class="terms-container">
         <!-- Left Column -->
-        <aside class="terms-left">
-          <div class="back-row">
-            <span class="back-arrow">&#60;</span>
-            <span>Privacy and Policy</span>
-          </div>
-
-          <h1 class="left-title">Privacy and Policy</h1>
-
-          <ul class="left-list">
-            <li>1. Interpretations &amp; Definitions</li>
-            <li>2. Collecting and using your personal data</li>
-            <li>3. Use of your personal data</li>
-            <li>4. Retention of your personal data</li>
-            <li>5. Transfer of your personal data</li>
-            <li>6. Delete your personal data</li>
-            <li>7. Disclosure of your personal data</li>
-            <li>8. Changes to this privacy policy</li>
-          </ul>
-        </aside>
-
+      <div class="left" id="leftPanel">
+        <div class="back-row">
+          <span class="back-arrow">&#60;</span>
+          <span>Back</span>
+        </div>
+        <div class="left-header" onclick="toggleDropdown()">
+          <h1>Privacy Policy</h1>
+          <div class="dropdown-icon" id="dropdown-icon">▼</div>
+        </div>
+        <ul class="nav">
+          <li>1. Interpretations & Definitions</li>
+          <li>2. Collecting and using your personal data</li>
+          <li>3. Use of your personal data</li>
+          <li>4. Retention of your personal data</li>
+          <li>5. Transfer of your personal data</li>
+          <li>6. Delete your personal data</li>
+          <li>7. Disclosure of your personal data</li>
+          <li>8. Changes to this privacy policy</li>
+        </ul>
+      </div>
         <!-- Right Column -->
         <main class="terms-right">
           <div class="effective-row">
@@ -479,5 +488,13 @@
         </main>
       </div>
     </div>
+    <script>
+      function toggleDropdown() {
+        if (window.innerWidth <= 900) {
+          document.getElementById("leftPanel").classList.toggle("open"); 
+          document.getElementById("dropdown-icon").classList.toggle("rotate");
+        }
+      }
+    </script>
   </body>
 </html>
