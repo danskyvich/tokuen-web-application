@@ -1,18 +1,84 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-font-family: 'Inter', sans-serif;
+font-family: 'Arial', sans-serif;
 background: #f4f5f7;
-padding: 24px;
 color: #111827;
 }
 
 .dashboard {
-max-width: 1200px;
-margin: auto;
+max-width: 1100px;
+margin: 40px auto;
+padding: 0 24px;
 display: grid;
 gap: 24px;
 }
+
+/* Header */
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 32px;
+}
+
+.logo-div {
+display: flex;
+justify-content: left;
+align-items: center;
+gap: 10px;
+}
+
+.logo-pic {
+width: 36px;
+height: 36px;
+}
+
+.logo-pic img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.logo {
+font-weight: 900;
+letter-spacing: 1px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.user {
+display: flex;
+align-items: center;
+gap: 16px;
+}
+
+.bell {
+display: flex;
+align-items: center;
+width: 36px;
+height: 36px;
+}
+
+.bell img {
+width: 65%;
+height: 65%;
+object-fit: cover;
+}
+
+.avatar {
+width: 36px;
+height: 36px;
+border-radius: 50%;
+background: #2563eb;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 600;
+}
+
 
 header {
 display: flex;
@@ -33,7 +99,7 @@ gap: 16px;
 background: #111827;
 color: white;
 padding: 20px;
-border-radius: 2px;
+border-radius: 16px;
 border: 1px solid #000;
 }
 
@@ -53,7 +119,7 @@ gap: 16px;
 background: linear-gradient(135deg, #7c5cff, #5b3df5);
 color: white;
 padding: 20px;
-border-radius: 2px;
+border-radius: 16px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -122,7 +188,7 @@ align-items: start;
 
 .transactions, .wallet, .chart {
 background: white;
-border-radius: 2px;
+border-radius: 16px;
 border: 1px solid #000;
 overflow: hidden;
 min-height: 260px;
@@ -170,6 +236,12 @@ align-items: center;
 justify-content: center;
 }
 
+.tx-icon img {
+width: 65%;
+height: 65%;
+object-fit: cover;
+}
+
 .tx-sub {
 font-size: 12px;
 color: #9ca3af;
@@ -194,8 +266,7 @@ margin-top: 6px;
 .wallet-actions {
 display: flex;
 justify-content: space-around;
-padding: 16px 0;
-border-top: 1px solid #000;
+margin: 16px 0;
 }
 
 .wallet-actions .icon {
@@ -203,11 +274,23 @@ width: 42px;
 height: 42px;
 background: #6c4eff;
 color: white;
-border-radius: 2px;
+border-radius: 22px;
 display: flex;
 align-items: center;
 justify-content: center;
 margin: 0 auto 6px;
+transition: transform 0.3s ease-out;
+}
+
+.icon:hover {
+transform: scale(1.05);
+background: #4f2df9;
+}
+
+.icon img {
+width: 65%;
+height: 65%;
+object-fit: cover;
 }
 
 .wallet-note {
