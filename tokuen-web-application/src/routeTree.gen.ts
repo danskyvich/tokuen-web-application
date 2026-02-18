@@ -37,6 +37,7 @@ import { Route as UpdatePhoneNumberVerifiedRouteImport } from './routes/update-p
 import { Route as TopUpTopUpMainRouteImport } from './routes/top-up/top-up-main'
 import { Route as TokuenInfoTermsAndConditionsRouteImport } from './routes/tokuen-info/terms-and-conditions'
 import { Route as TokuenInfoPrivacyPolicyRouteImport } from './routes/tokuen-info/privacy-policy'
+import { Route as QrScannerScanRouteImport } from './routes/qr-scanner/scan'
 import { Route as PaymentMethodsCardAddedRouteImport } from './routes/payment-methods/card-added'
 import { Route as PaymentMethodsAddCardRouteImport } from './routes/payment-methods/add-card'
 import { Route as PayLoanReviewDetailsRouteImport } from './routes/pay-loan/review-details'
@@ -49,6 +50,7 @@ import { Route as LoanApplicationLoanApprovedRouteImport } from './routes/loan-a
 import { Route as LoanApplicationChooseEmiRouteImport } from './routes/loan-application/choose-emi'
 import { Route as DeleteAccountDeleteUsingPhoneRouteImport } from './routes/delete-account/delete-using-phone'
 import { Route as DeleteAccountAccountDeletedRouteImport } from './routes/delete-account/account-deleted'
+import { Route as BillsPaymentPaymentMainRouteImport } from './routes/bills-payment/payment-main'
 import { Route as AddPhoneNumberPhoneNumberAddedRouteImport } from './routes/add-phone-number/phone-number-added'
 import { Route as AuthenticationVerifyEmailIndexRouteImport } from './routes/authentication/verify-email/index'
 import { Route as AuthenticationRegistrationIndexRouteImport } from './routes/authentication/registration/index'
@@ -206,6 +208,11 @@ const TokuenInfoPrivacyPolicyRoute = TokuenInfoPrivacyPolicyRouteImport.update({
   path: '/tokuen-info/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QrScannerScanRoute = QrScannerScanRouteImport.update({
+  id: '/qr-scanner/scan',
+  path: '/qr-scanner/scan',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PaymentMethodsCardAddedRoute = PaymentMethodsCardAddedRouteImport.update({
   id: '/payment-methods/card-added',
   path: '/payment-methods/card-added',
@@ -271,6 +278,11 @@ const DeleteAccountAccountDeletedRoute =
     path: '/delete-account/account-deleted',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BillsPaymentPaymentMainRoute = BillsPaymentPaymentMainRouteImport.update({
+  id: '/bills-payment/payment-main',
+  path: '/bills-payment/payment-main',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AddPhoneNumberPhoneNumberAddedRoute =
   AddPhoneNumberPhoneNumberAddedRouteImport.update({
     id: '/add-phone-number/phone-number-added',
@@ -330,6 +342,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
   '/add-phone-number/phone-number-added': typeof AddPhoneNumberPhoneNumberAddedRoute
+  '/bills-payment/payment-main': typeof BillsPaymentPaymentMainRoute
   '/delete-account/account-deleted': typeof DeleteAccountAccountDeletedRoute
   '/delete-account/delete-using-phone': typeof DeleteAccountDeleteUsingPhoneRoute
   '/loan-application/choose-emi': typeof LoanApplicationChooseEmiRoute
@@ -342,6 +355,7 @@ export interface FileRoutesByFullPath {
   '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
   '/payment-methods/add-card': typeof PaymentMethodsAddCardRoute
   '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
+  '/qr-scanner/scan': typeof QrScannerScanRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
   '/top-up/top-up-main': typeof TopUpTopUpMainRoute
@@ -381,6 +395,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
   '/add-phone-number/phone-number-added': typeof AddPhoneNumberPhoneNumberAddedRoute
+  '/bills-payment/payment-main': typeof BillsPaymentPaymentMainRoute
   '/delete-account/account-deleted': typeof DeleteAccountAccountDeletedRoute
   '/delete-account/delete-using-phone': typeof DeleteAccountDeleteUsingPhoneRoute
   '/loan-application/choose-emi': typeof LoanApplicationChooseEmiRoute
@@ -393,6 +408,7 @@ export interface FileRoutesByTo {
   '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
   '/payment-methods/add-card': typeof PaymentMethodsAddCardRoute
   '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
+  '/qr-scanner/scan': typeof QrScannerScanRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
   '/top-up/top-up-main': typeof TopUpTopUpMainRoute
@@ -433,6 +449,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/sample': typeof SampleRoute
   '/add-phone-number/phone-number-added': typeof AddPhoneNumberPhoneNumberAddedRoute
+  '/bills-payment/payment-main': typeof BillsPaymentPaymentMainRoute
   '/delete-account/account-deleted': typeof DeleteAccountAccountDeletedRoute
   '/delete-account/delete-using-phone': typeof DeleteAccountDeleteUsingPhoneRoute
   '/loan-application/choose-emi': typeof LoanApplicationChooseEmiRoute
@@ -445,6 +462,7 @@ export interface FileRoutesById {
   '/pay-loan/review-details': typeof PayLoanReviewDetailsRoute
   '/payment-methods/add-card': typeof PaymentMethodsAddCardRoute
   '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
+  '/qr-scanner/scan': typeof QrScannerScanRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
   '/top-up/top-up-main': typeof TopUpTopUpMainRoute
@@ -486,6 +504,7 @@ export interface FileRouteTypes {
     | '/'
     | '/sample'
     | '/add-phone-number/phone-number-added'
+    | '/bills-payment/payment-main'
     | '/delete-account/account-deleted'
     | '/delete-account/delete-using-phone'
     | '/loan-application/choose-emi'
@@ -498,6 +517,7 @@ export interface FileRouteTypes {
     | '/pay-loan/review-details'
     | '/payment-methods/add-card'
     | '/payment-methods/card-added'
+    | '/qr-scanner/scan'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
     | '/top-up/top-up-main'
@@ -537,6 +557,7 @@ export interface FileRouteTypes {
     | '/'
     | '/sample'
     | '/add-phone-number/phone-number-added'
+    | '/bills-payment/payment-main'
     | '/delete-account/account-deleted'
     | '/delete-account/delete-using-phone'
     | '/loan-application/choose-emi'
@@ -549,6 +570,7 @@ export interface FileRouteTypes {
     | '/pay-loan/review-details'
     | '/payment-methods/add-card'
     | '/payment-methods/card-added'
+    | '/qr-scanner/scan'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
     | '/top-up/top-up-main'
@@ -588,6 +610,7 @@ export interface FileRouteTypes {
     | '/'
     | '/sample'
     | '/add-phone-number/phone-number-added'
+    | '/bills-payment/payment-main'
     | '/delete-account/account-deleted'
     | '/delete-account/delete-using-phone'
     | '/loan-application/choose-emi'
@@ -600,6 +623,7 @@ export interface FileRouteTypes {
     | '/pay-loan/review-details'
     | '/payment-methods/add-card'
     | '/payment-methods/card-added'
+    | '/qr-scanner/scan'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
     | '/top-up/top-up-main'
@@ -640,6 +664,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SampleRoute: typeof SampleRoute
   AddPhoneNumberPhoneNumberAddedRoute: typeof AddPhoneNumberPhoneNumberAddedRoute
+  BillsPaymentPaymentMainRoute: typeof BillsPaymentPaymentMainRoute
   DeleteAccountAccountDeletedRoute: typeof DeleteAccountAccountDeletedRoute
   DeleteAccountDeleteUsingPhoneRoute: typeof DeleteAccountDeleteUsingPhoneRoute
   LoanApplicationChooseEmiRoute: typeof LoanApplicationChooseEmiRoute
@@ -652,6 +677,7 @@ export interface RootRouteChildren {
   PayLoanReviewDetailsRoute: typeof PayLoanReviewDetailsRoute
   PaymentMethodsAddCardRoute: typeof PaymentMethodsAddCardRoute
   PaymentMethodsCardAddedRoute: typeof PaymentMethodsCardAddedRoute
+  QrScannerScanRoute: typeof QrScannerScanRoute
   TokuenInfoPrivacyPolicyRoute: typeof TokuenInfoPrivacyPolicyRoute
   TokuenInfoTermsAndConditionsRoute: typeof TokuenInfoTermsAndConditionsRoute
   TopUpTopUpMainRoute: typeof TopUpTopUpMainRoute
@@ -886,6 +912,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TokuenInfoPrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/qr-scanner/scan': {
+      id: '/qr-scanner/scan'
+      path: '/qr-scanner/scan'
+      fullPath: '/qr-scanner/scan'
+      preLoaderRoute: typeof QrScannerScanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/payment-methods/card-added': {
       id: '/payment-methods/card-added'
       path: '/payment-methods/card-added'
@@ -970,6 +1003,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeleteAccountAccountDeletedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bills-payment/payment-main': {
+      id: '/bills-payment/payment-main'
+      path: '/bills-payment/payment-main'
+      fullPath: '/bills-payment/payment-main'
+      preLoaderRoute: typeof BillsPaymentPaymentMainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/add-phone-number/phone-number-added': {
       id: '/add-phone-number/phone-number-added'
       path: '/add-phone-number/phone-number-added'
@@ -1040,6 +1080,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SampleRoute: SampleRoute,
   AddPhoneNumberPhoneNumberAddedRoute: AddPhoneNumberPhoneNumberAddedRoute,
+  BillsPaymentPaymentMainRoute: BillsPaymentPaymentMainRoute,
   DeleteAccountAccountDeletedRoute: DeleteAccountAccountDeletedRoute,
   DeleteAccountDeleteUsingPhoneRoute: DeleteAccountDeleteUsingPhoneRoute,
   LoanApplicationChooseEmiRoute: LoanApplicationChooseEmiRoute,
@@ -1052,6 +1093,7 @@ const rootRouteChildren: RootRouteChildren = {
   PayLoanReviewDetailsRoute: PayLoanReviewDetailsRoute,
   PaymentMethodsAddCardRoute: PaymentMethodsAddCardRoute,
   PaymentMethodsCardAddedRoute: PaymentMethodsCardAddedRoute,
+  QrScannerScanRoute: QrScannerScanRoute,
   TokuenInfoPrivacyPolicyRoute: TokuenInfoPrivacyPolicyRoute,
   TokuenInfoTermsAndConditionsRoute: TokuenInfoTermsAndConditionsRoute,
   TopUpTopUpMainRoute: TopUpTopUpMainRoute,

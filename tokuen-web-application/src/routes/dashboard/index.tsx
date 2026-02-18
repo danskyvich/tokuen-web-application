@@ -8,6 +8,7 @@ import HomeFilledIcon from '@mui/icons-material/HomeFilled';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet'; 
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import QrCodeIcon from '@mui/icons-material/QrCode';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -80,26 +81,32 @@ function RouteComponent() {
       <div className='flex flex-1 flex-col w-full h-fit px-5 items-center justify-start gap-5'>
         <DashboardButton
           text='Dashboard'
-          url=''
+          url='/dashboard/'
           icon={<HomeFilledIcon sx={{fontSize: 'var(--icon-size-normal)'}}/>}
           textSize='1rem'
         />
         <DashboardButton
           text='Borrow'
-          url=''
+          url='/bills-payment/payment-main/'
           icon={<AccountBalanceWalletIcon sx={{fontSize: 'var(--icon-size-normal)'}}/>}
           textSize='1rem'
         />
         <DashboardButton
           text='Lend'
-          url=''
+          url='/top-up/top-up-main/'
           icon={<AttachMoneyIcon sx={{fontSize: 'var(--icon-size-normal)'}}/>}
           textSize='1rem'
         />
         <DashboardButton
           text='Scan'
-          url=''
+          url='/qr-scanner/scan/'
           icon={<QrCodeIcon sx={{fontSize: 'var(--icon-size-normal)'}}/>}
+          textSize='1rem'
+        />
+        <DashboardButton
+          text='Loans'
+          url='/loans/loan-list/'
+          icon={<CreditCardIcon sx={{fontSize: 'var(--icon-size-normal)'}}/>}
           textSize='1rem'
         />
       </div>
@@ -125,7 +132,7 @@ function RouteComponent() {
         />
         <BottomButtons
           text='Help'
-          url='/help/'
+          url='/help-center/'
           icon={<HelpIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
         />
       </div>
@@ -173,14 +180,14 @@ function RouteComponent() {
             url={''}
             text='Loans under review'
             boxIcon={<RateReviewIcon sx={{ fontSize: '5rem'}}/>}
-            redirectIcon={''}
+            redirectIcon={<KeyboardArrowRightIcon sx={{ fontSize: '3rem', color: 'white'}}/>}
             result={'02'}
           />
           <GeneralContainerBlack
             url={''}
             text='Loans in progress'
             boxIcon={<MonetizationOnIcon sx={{ fontSize: '5rem'}}/>}
-            redirectIcon={''}
+            redirectIcon={<KeyboardArrowRightIcon sx={{ fontSize: '3rem', color: 'white'}}/>}
             result={'01'}
           />
         </div>
