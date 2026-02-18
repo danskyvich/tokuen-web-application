@@ -14,7 +14,15 @@ function RouteComponent() {
       />
 
       <section className='flex flex-col flex-1 w-full h-full px-[20%]'>
-        <p className='flex-1 text-4xl font-semibold'>Settings</p>
+        <p className='text-4xl font-semibold mb-15'>Settings</p>
+        <p className='text-4xl font-semibold mb-5'>Preferences</p>
+        <p className='text-3xl ml-5 mb-5 cursor-pointer hover:font-semibold transition-all duration-150'>Theme: Light</p>
+        <p className='text-3xl ml-5 mb-5 cursor-pointer hover:font-semibold transition-all duration-150'>Language: English</p>
+        <p className='text-3xl ml-5 mb-15 cursor-pointer hover:font-semibold transition-all duration-150'>Notifications: Enabled</p>
+        <p className='text-4xl font-semibold mb-5'>Privacy</p>
+        <p className='text-3xl ml-5 mb-5 cursor-pointer hover:font-semibold transition-all duration-150'>Location Access: Off</p>
+        <p className='text-3xl ml-5 mb-5 cursor-pointer hover:font-semibold transition-all duration-150'>Data Sharing: Disabled</p>
       </section>
+
     </div>
 }
